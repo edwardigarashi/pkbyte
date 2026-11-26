@@ -1,0 +1,103 @@
+name: Rust checks
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        toolchain: ["1.74.0", stable]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: ${{ matrix.toolchain }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: rustc -vV
+      - run: cargo test --all-targets --locked --offline
+      - run: cargo test --doc --locked --offline
+      - run: python tools/run_generated.py --toolchain ${{ matrix.toolchain }}
+
+  style:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: cargo fmt --all -- --check
+      - run: python tools/run_generated.py fmt
+      - run: cargo clippy --all-targets --locked --offline -- -D warnings
+      - run: python tools/run_generated.py clippy
+      - run: cargo test --release --test prepared_allocations --locked --offline
+      - run: cargo doc --no-deps --locked --offline
+        env:
+          RUSTDOCFLAGS: -D warnings
+
+  portability:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: i686-unknown-linux-musl,powerpc64-unknown-linux-gnu,wasm32-unknown-unknown,wasm32-wasip1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Execute 32-bit Linux tests
+        run: |
+          host=$(rustc -vV | sed -n 's/^host: //p')
+          export CARGO_TARGET_I686_UNKNOWN_LINUX_MUSL_LINKER="$(rustc --print sysroot)/lib/rustlib/$host/bin/rust-lld"
+          cargo test --target i686-unknown-linux-musl --all-targets --locked --offline
+      - name: Check big-endian library
+        run: cargo check --target powerpc64-unknown-linux-gnu --lib --locked --offline
+      - name: Compile WebAssembly library and generated consumer
+        run: |
+          cargo check --target wasm32-unknown-unknown --lib --locked --offline
+          python tools/run_generated.py --target wasm32-unknown-unknown build
+      - name: Execute WASI Preview 1 checks
+        run: |
+          python -m pip install wasmtime==38.0.0
+          export CARGO_TARGET_WASM32_WASIP1_RUNNER="python $GITHUB_WORKSPACE/tools/run_wasi.py"
+          cargo test --target wasm32-wasip1 --lib --test compact --test compatibility --test roundtrip_and_format --test input_limits --test picker --locked --offline -- --test-threads=1 --skip file_picker_matches_the_established_cli_seeded_sequence
+          python tools/run_generated.py --target wasm32-wasip1
+
+  local-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: '1.100.0'
+          components: rustfmt, clippy
+          targets: x86_64-unknown-linux-musl
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: rustup toolchain install 1.74.0 --profile minimal
+      - run: python tools/verify_release.py
+
+  fuzz-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@nightly
+        with:
+          components: rust-src
+      - run: cargo install cargo-fuzz --version 0.13.2 --locked
+      - name: Exercise both fuzz targets
+        run: |
+          mkdir -p fuzz/work/table_read fuzz/work/compact_roundtrip
+          cargo +nightly fuzz run --sanitizer address table_read fuzz/work/table_read fuzz/seeds/table_read -- -seed=73031 -runs=1024 -max_len=16384 -timeout=5 -rss_limit_mb=512
+          cargo +nightly fuzz run --sanitizer address compact_roundtrip fuzz/work/compact_roundtrip fuzz/seeds/compact_roundtrip -- -seed=73032 -runs=1024 -max_len=16384 -timeout=5 -rss_limit_mb=512

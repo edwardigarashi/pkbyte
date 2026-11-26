@@ -1,0 +1,374 @@
+{
+  "schema_version": 3,
+  "dataset": {
+    "path": "/var/home/e/project/pkbyte/data/ssa_2024_given_names.txt",
+    "unique_names": 29329,
+    "maximum_utf8_bytes": 15,
+    "sha256": "a9c432e163d94e066fc068020f249b333f4ff1703298ecacc13e579bcbeff396"
+  },
+  "environment": {
+    "os": "linux",
+    "arch": "x86_64",
+    "sqlite_version": "3.51.2",
+    "json_c_version": "0.18",
+    "zlib_version": "1.3.1.zlib-ng",
+    "run_started_utc": "2026-11-25T12:56:10+00:00",
+    "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+    "kernel": "7.0.13-200.fc44.x86_64",
+    "logical_cpus": 24,
+    "cpu_model": "12th Gen Intel(R) Core(TM) i9-12900K",
+    "system_libraries": {
+      "sqlite3": "libsqlite3.so.0",
+      "json-c": "libjson-c.so.5",
+      "z": "libz.so.1"
+    },
+    "profile": "release library; rustc -O harness; no target-cpu=native"
+  },
+  "methodology": {
+    "iterations_per_batch": 100000,
+    "timed_batches": 9,
+    "startup_rounds": 9,
+    "unreported_warmup_batches": 1,
+    "rng_timed": {
+      "warm_retrieval": false,
+      "warm_sampling": true
+    },
+    "sampling_rng": "SplitMix64 (noncryptographic)",
+    "sampling_range_reduction": "pkbyte::uniform_below",
+    "rng_reseeded_before_each_batch": true,
+    "full_byte_checksum_timed": true,
+    "result_copy_timed": true,
+    "result_utf8_checked_timed": true,
+    "warm_buffers_preallocated": true,
+    "startup_output_buffer_preallocated": true,
+    "os_page_cache": "warm",
+    "startup_excludes_reader_teardown": true,
+    "rank_translations_precomputed": true,
+    "json_gzip_order": "lexical",
+    "sqlite_single_thread_nomutex": true,
+    "individual_request_percentiles": false,
+    "sampling_seed_hex": "6e616d657061636b",
+    "checksum_hex": "2ed817f7bd0b3690"
+  },
+  "sizes_bytes": {
+    "name_bytes_without_delimiters": 178667,
+    "input_text": 207996,
+    "compact_json": 266655,
+    "gzip_text_level_9": 73451,
+    "sqlite": 438272,
+    "pkbyte_raw": 178955,
+    "pkbyte_compact": 70868
+  },
+  "build_time_ns": {
+    "compact": 65811941,
+    "raw": 1529176
+  },
+  "warm_retrieval_ns_per_lookup": {
+    "compact": {
+      "median": 60.897,
+      "min": 59.701,
+      "max": 61.615,
+      "batch_elapsed_ns": [
+        6074235,
+        6024704,
+        6089687,
+        6112895,
+        5970072,
+        6161550,
+        6136250,
+        6018178,
+        6134438
+      ]
+    },
+    "compact_prepared": {
+      "median": 51.612,
+      "min": 50.321,
+      "max": 54.918,
+      "batch_elapsed_ns": [
+        5037278,
+        5284541,
+        5185172,
+        5429214,
+        5032062,
+        5491808,
+        5068877,
+        5161184,
+        5116196
+      ]
+    },
+    "loaded_vector": {
+      "median": 23.656,
+      "min": 22.445,
+      "max": 24.117,
+      "batch_elapsed_ns": [
+        2365642,
+        2244484,
+        2371372,
+        2411666,
+        2340597,
+        2409607,
+        2390527,
+        2330106,
+        2309023
+      ]
+    },
+    "raw": {
+      "median": 24.099,
+      "min": 23.804,
+      "max": 24.849,
+      "batch_elapsed_ns": [
+        2380418,
+        2380878,
+        2433711,
+        2387439,
+        2415609,
+        2445778,
+        2409898,
+        2402488,
+        2484856
+      ]
+    },
+    "sqlite_prepared_autocommit": {
+      "median": 2526.732,
+      "min": 2517.952,
+      "max": 2556.345,
+      "batch_elapsed_ns": [
+        252200474,
+        251951336,
+        252592701,
+        252974273,
+        254660129,
+        255634493,
+        251795200,
+        252673191,
+        253537661
+      ]
+    },
+    "sqlite_prepared_read_transaction": {
+      "median": 245.627,
+      "min": 243.792,
+      "max": 248.484,
+      "batch_elapsed_ns": [
+        24643485,
+        24379221,
+        24536152,
+        24535313,
+        24562729,
+        24569804,
+        24848442,
+        24485479,
+        24793302
+      ]
+    }
+  },
+  "warm_sampling_ns_per_name": {
+    "compact_prepared_sample_into": {
+      "median": 57.561,
+      "min": 55.751,
+      "max": 58.672,
+      "batch_elapsed_ns": [
+        5725629,
+        5774488,
+        5756123,
+        5764650,
+        5575059,
+        5864420,
+        5679386,
+        5867231,
+        5618337
+      ]
+    },
+    "compact_sample_into": {
+      "median": 65.264,
+      "min": 64.782,
+      "max": 66.271,
+      "batch_elapsed_ns": [
+        6518306,
+        6478187,
+        6526440,
+        6627069,
+        6578159,
+        6603741,
+        6512634,
+        6625780,
+        6504077
+      ]
+    },
+    "loaded_vector": {
+      "median": 30.45,
+      "min": 25.686,
+      "max": 32.284,
+      "batch_elapsed_ns": [
+        3228401,
+        3082801,
+        3228140,
+        2568607,
+        2970112,
+        3044999,
+        3111829,
+        2931229,
+        3030991
+      ]
+    },
+    "sqlite_prepared_read_transaction": {
+      "median": 251.036,
+      "min": 248.509,
+      "max": 254.021,
+      "batch_elapsed_ns": [
+        25402104,
+        25253706,
+        25158427,
+        25006220,
+        25103558,
+        25150839,
+        24850947,
+        25025801,
+        24984204
+      ]
+    }
+  },
+  "startup_warm_cache_microseconds": {
+    "compact_crc_open": {
+      "median": 214.539,
+      "min": 205.4,
+      "max": 218.709,
+      "batch_elapsed_ns": [
+        218709,
+        215144,
+        215340,
+        214539,
+        211599,
+        205400,
+        217792,
+        211290,
+        211345
+      ]
+    },
+    "compact_structural_open": {
+      "median": 90.658,
+      "min": 85.088,
+      "max": 101.227,
+      "batch_elapsed_ns": [
+        99192,
+        91127,
+        90081,
+        89067,
+        90658,
+        85088,
+        101227,
+        93067,
+        89283
+      ]
+    },
+    "gzip_text_read_decode_parse_lookup": {
+      "median": 1203.137,
+      "min": 1023.495,
+      "max": 1250.02,
+      "batch_elapsed_ns": [
+        1177322,
+        1201650,
+        1204308,
+        1212316,
+        1023495,
+        1250020,
+        1205554,
+        1203137,
+        1171883
+      ]
+    },
+    "json_c_read_parse_lookup": {
+      "median": 1380.265,
+      "min": 1325.468,
+      "max": 1529.782,
+      "batch_elapsed_ns": [
+        1373625,
+        1360463,
+        1391061,
+        1381050,
+        1325468,
+        1529782,
+        1346947,
+        1383053,
+        1380265
+      ]
+    },
+    "raw_crc_open": {
+      "median": 305.93,
+      "min": 299.138,
+      "max": 322.147,
+      "batch_elapsed_ns": [
+        322147,
+        305046,
+        310103,
+        301055,
+        305436,
+        310449,
+        305930,
+        312502,
+        299138
+      ]
+    },
+    "sqlite_open_prepare_lookup": {
+      "median": 45.908,
+      "min": 34.343,
+      "max": 57.883,
+      "batch_elapsed_ns": [
+        52153,
+        41111,
+        47652,
+        45908,
+        38031,
+        34343,
+        57883,
+        48880,
+        41528
+      ]
+    }
+  },
+  "reproduction": {
+    "rustup_toolchain": "1.100.0",
+    "command": [
+      "/usr/bin/python3",
+      "/var/home/e/project/pkbyte/benchmarks/run.py",
+      "--input",
+      "/var/home/e/project/pkbyte/data/ssa_2024_given_names.txt",
+      "--output-dir",
+      "/var/home/e/project/pkbyte/benchmarks/out/verification-native-ssa",
+      "--iterations",
+      "100000",
+      "--rounds",
+      "9",
+      "--startup-rounds",
+      "9"
+    ],
+    "harness_sha256": "a4fa870aeef5ebfdde84d727d7993929c57378550844deba6f600eb8e25a0519",
+    "runner_sha256": "7a18e4d2e10f3a743eed56b84d6a0064a43c58872d0901ffa8aef9afaaf33515",
+    "core_source_files_sha256": {
+      "Cargo.toml": "f90fa4d27f1139e1f7a53aecf1b3b55954e08dfc2c269443e7f40b00af97ecbf",
+      "Cargo.lock": "5a8edc83fe739da4a05af8f464a3afda6f3ad065c5ef980d008a3b51ae0fa582",
+      "src/bin/pkbyte/jsonl.rs": "54e927e94fd0e278f2726af0822e36185e422b9f6d261840a82d593d019fcef2",
+      "src/bin/pkbyte.rs": "c52ef952b2e50b9fc682107b1457498159824c682e8bdbaf583181487ef8cf65",
+      "src/build_support.rs": "b3f0c20e89016291bfd21b72aafef8b785fdbf56d085cf1450b868536bcb3318",
+      "src/builder.rs": "cc4db2582ce61f37d8adb1ffe01268cbd6d82c29160cd56f833f0efbfa38c44b",
+      "src/ef.rs": "9ef7766f3656ba2a7b3faedce3ad773e2142722ce877c1db025ff8760032e57f",
+      "src/error.rs": "baf1e0e9902b575a845440c9fbab2b6d7d42f7ad269dd6745174240900ef7a96",
+      "src/format.rs": "3cfd994680ac6a3150b46f01c10e0df7a9a20ef92e06f69c84c52ef727b2801d",
+      "src/lib.rs": "c813a5fd7c49bab3ad8fff897b4147ef5d98f64583500e456362783a1241d058",
+      "src/reader/prepared.rs": "7848e67e74de061fdee4336969d79b31f732a586b2b92aa644790bf9619a5e7c",
+      "src/reader.rs": "1794307d90b1fb938187106b4f57aa4dbf69af749949321a47543c8ec4d0edcf",
+      "src/sampling.rs": "63c8c31c95a5bda0f49eaa2a94d6dbd29748702393a33a56ce3286ea4ffe6543",
+      "src/text.rs": "2dfe39a6772a5ae851df7493b9101efff649fbb61f64fa371980383cc4cb9212"
+    },
+    "core_source_manifest_sha256": "3097aff2f56eb525c4509169357c61bd64eb7136d9eb42c319e48abb534a3734",
+    "core_source_manifest_hash_format": "SHA-256 of UTF-8 JSON mapping relative paths to content SHA-256 hashes; sorted keys; separators comma and colon; no trailing newline.",
+    "release_rlib_sha256": "b0a674e70e165a3ceba3e1d4d4f25e824c630807bbd669d39fd885b2c66c7244",
+    "benchmark_executable_sha256": "2ff7cc8cd60b56e57a589f8d631390ddc74c597bc5d070ac7ced9f37c3e53434",
+    "generated_files_sha256": {
+      "names.compact.npk": "adf902a86dcd4cbc35ef20827bf3a9ec4e84a8a5db86c5a208bc9fbf40c5a5fc",
+      "names.raw.npk": "3b0bba2db849b356f1fbd2708c310bdaa10f2a7cc33b4a6073016ae6404e42bf",
+      "names.json": "2768c305918e95f2d297b95cca35caa5bffed58b203d8214bf173e9dc4d93074",
+      "names.txt.gz": "9119955f5f05ae409b9caa0f7622666fe0f7e9955ce222b1ff6f9d4c85d9cefc",
+      "names.sqlite": "cdb98c5329522ae879ba22aeff46a9d7555ea50661ce90bd8f1e33c34653833f"
+    }
+  }
+}

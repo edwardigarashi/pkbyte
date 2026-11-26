@@ -1,0 +1,3552 @@
+{
+  "iterations_per_warm_batch": 200000,
+  "measured_rounds": 7,
+  "measured_build_rounds": 3,
+  "unreported_warmup_rounds": 1,
+  "value_byte_limit": 8192,
+  "sampling_seed_hex": "5a17e6d9b0432c81",
+  "datasets": [
+    {
+      "dataset": "ssa_2024",
+      "rows": 29329,
+      "matched_trace_checksum_hex": "6333fb149461334b",
+      "matched_trace_output_bytes": 1218337,
+      "loaded_vector": {
+        "inline_bytes": 24,
+        "retained_heap_bytes": 965099,
+        "scratch_bytes": 15,
+        "matched_retrieval": {
+          "median_ns_per_value": 18.863,
+          "elapsed_ns": [
+            3626551,
+            3745767,
+            3777368,
+            3831160,
+            3772682,
+            3903323,
+            3766570
+          ]
+        }
+      },
+      "modes": [
+        {
+          "mode": "raw",
+          "format_version": 2,
+          "file_bytes": 178955,
+          "decoded_bytes": 178667,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 0,
+          "raw_rows": 29329,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 0,
+          "ef_power_of_two_rows": 0,
+          "groups": 14,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 560,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 3668,
+          "prepared_hint_bytes": 3668,
+          "checked_scratch_capacity_bytes": 15,
+          "prepared_scratch_required_bytes": 15,
+          "local_trace_checksum_hex": "25df0de935166f9b",
+          "local_trace_output_bytes": 1217604,
+          "setup": {
+            "build": {
+              "median_ns": 1442033.0,
+              "elapsed_ns": [
+                1433745,
+                1442033,
+                1481336
+              ]
+            },
+            "structural_open": {
+              "median_ns": 1105.0,
+              "elapsed_ns": [
+                1328,
+                890,
+                955,
+                1112,
+                1105,
+                1066,
+                1223
+              ]
+            },
+            "normal_open": {
+              "median_ns": 293552.0,
+              "elapsed_ns": [
+                293552,
+                285009,
+                317021,
+                293326,
+                312003,
+                293661,
+                288140
+              ]
+            },
+            "full_validation": {
+              "median_ns": 4793549.0,
+              "elapsed_ns": [
+                4715714,
+                4701832,
+                4793549,
+                4765438,
+                4919132,
+                4925151,
+                4844101
+              ]
+            },
+            "prepare": {
+              "median_ns": 4781396.0,
+              "elapsed_ns": [
+                4824298,
+                4645513,
+                4849082,
+                4781396,
+                4769779,
+                4723222,
+                4809620
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 16.735,
+              "elapsed_ns": [
+                3359177,
+                3243641,
+                3295599,
+                3366793,
+                3347075,
+                3275316,
+                3354366
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 17.833,
+              "elapsed_ns": [
+                3576195,
+                3496540,
+                3613750,
+                3547209,
+                3439095,
+                3643890,
+                3566582
+              ]
+            }
+          },
+          "file_sha256": "3b0bba2db849b356f1fbd2708c310bdaa10f2a7cc33b4a6073016ae6404e42bf",
+          "build_allocations": {
+            "allocation_calls": [
+              29458,
+              29458,
+              29458
+            ],
+            "requested_bytes": [
+              4011694,
+              4011694,
+              4011694
+            ],
+            "peak_live_bytes": [
+              2185174,
+              2185174,
+              2185174
+            ],
+            "live_bytes_at_return": [
+              178955,
+              178955,
+              178955
+            ],
+            "returned_table_capacity_bytes": [
+              178955,
+              178955,
+              178955
+            ]
+          }
+        },
+        {
+          "mode": "phrase",
+          "format_version": 2,
+          "file_bytes": 106230,
+          "decoded_bytes": 178667,
+          "dictionary_bytes": 800,
+          "elias_fano_bytes": 0,
+          "raw_rows": 480,
+          "phrase_rows": 28849,
+          "ef_mixed_rows": 0,
+          "ef_power_of_two_rows": 0,
+          "groups": 16,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 4736,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 5972,
+          "prepared_hint_bytes": 3668,
+          "checked_scratch_capacity_bytes": 15,
+          "prepared_scratch_required_bytes": 22,
+          "local_trace_checksum_hex": "f4688ffad3cb2d9f",
+          "local_trace_output_bytes": 1218336,
+          "setup": {
+            "build": {
+              "median_ns": 59806419.0,
+              "elapsed_ns": [
+                59806419,
+                59863112,
+                57958269
+              ]
+            },
+            "structural_open": {
+              "median_ns": 39426.0,
+              "elapsed_ns": [
+                74222,
+                39426,
+                39255,
+                38989,
+                38733,
+                40199,
+                41384
+              ]
+            },
+            "normal_open": {
+              "median_ns": 208786.0,
+              "elapsed_ns": [
+                207546,
+                207012,
+                234267,
+                205235,
+                222623,
+                208786,
+                209002
+              ]
+            },
+            "full_validation": {
+              "median_ns": 5374040.0,
+              "elapsed_ns": [
+                5304017,
+                5301646,
+                5402853,
+                5337585,
+                5374040,
+                5524921,
+                5404814
+              ]
+            },
+            "prepare": {
+              "median_ns": 5387850.0,
+              "elapsed_ns": [
+                5316953,
+                5331144,
+                5426376,
+                5387850,
+                5396036,
+                5450022,
+                5241056
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 21.828,
+              "elapsed_ns": [
+                4368374,
+                4345805,
+                4349474,
+                4365680,
+                4303064,
+                4383047,
+                4396563
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 23.072,
+              "elapsed_ns": [
+                4549179,
+                4602570,
+                4645245,
+                4550748,
+                4614416,
+                4657436,
+                4655774
+              ]
+            }
+          },
+          "file_sha256": "1493b943a984a387eea7cceefe57b5a10440a0598029db9f4879e46c2a8c94cc",
+          "build_allocations": {
+            "allocation_calls": [
+              148383,
+              148383,
+              148383
+            ],
+            "requested_bytes": [
+              14042163,
+              14042163,
+              14042163
+            ],
+            "peak_live_bytes": [
+              2460944,
+              2460944,
+              2460944
+            ],
+            "live_bytes_at_return": [
+              106230,
+              106230,
+              106230
+            ],
+            "returned_table_capacity_bytes": [
+              106230,
+              106230,
+              106230
+            ]
+          }
+        },
+        {
+          "mode": "elias_fano_mixed",
+          "format_version": 3,
+          "file_bytes": 70868,
+          "decoded_bytes": 178667,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 70357,
+          "raw_rows": 56,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 29273,
+          "ef_power_of_two_rows": 0,
+          "groups": 14,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 2096,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 3668,
+          "prepared_hint_bytes": 3668,
+          "checked_scratch_capacity_bytes": 15,
+          "prepared_scratch_required_bytes": 15,
+          "local_trace_checksum_hex": "69fe3f04dc0d4500",
+          "local_trace_output_bytes": 1217639,
+          "setup": {
+            "build": {
+              "median_ns": 2194207.0,
+              "elapsed_ns": [
+                2248017,
+                2155523,
+                2194207
+              ]
+            },
+            "structural_open": {
+              "median_ns": 92068.0,
+              "elapsed_ns": [
+                91136,
+                93216,
+                121213,
+                90922,
+                91680,
+                92811,
+                92068
+              ]
+            },
+            "normal_open": {
+              "median_ns": 201084.0,
+              "elapsed_ns": [
+                201084,
+                209093,
+                199685,
+                199124,
+                210675,
+                203225,
+                200329
+              ]
+            },
+            "full_validation": {
+              "median_ns": 5741847.0,
+              "elapsed_ns": [
+                5566615,
+                5751453,
+                5741847,
+                5728926,
+                5751896,
+                5735003,
+                5813509
+              ]
+            },
+            "prepare": {
+              "median_ns": 5662144.0,
+              "elapsed_ns": [
+                5624645,
+                5563696,
+                5681943,
+                5804346,
+                5589558,
+                5662144,
+                5799454
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 51.774,
+              "elapsed_ns": [
+                10354704,
+                10217353,
+                10456398,
+                10335714,
+                10494336,
+                10544972,
+                10214200
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 53.911,
+              "elapsed_ns": [
+                10987496,
+                10782215,
+                10775672,
+                10761470,
+                10617722,
+                10843447,
+                10839448
+              ]
+            }
+          },
+          "file_sha256": "adf902a86dcd4cbc35ef20827bf3a9ec4e84a8a5db86c5a208bc9fbf40c5a5fc",
+          "build_allocations": {
+            "allocation_calls": [
+              29991,
+              29991,
+              29991
+            ],
+            "requested_bytes": [
+              5887511,
+              5887511,
+              5887511
+            ],
+            "peak_live_bytes": [
+              2185174,
+              2185174,
+              2185174
+            ],
+            "live_bytes_at_return": [
+              70868,
+              70868,
+              70868
+            ],
+            "returned_table_capacity_bytes": [
+              70868,
+              70868,
+              70868
+            ]
+          }
+        },
+        {
+          "mode": "elias_fano_power_of_two",
+          "format_version": 3,
+          "file_bytes": 76924,
+          "decoded_bytes": 178667,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 76413,
+          "raw_rows": 56,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 0,
+          "ef_power_of_two_rows": 29273,
+          "groups": 14,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 2096,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 3668,
+          "prepared_hint_bytes": 3668,
+          "checked_scratch_capacity_bytes": 15,
+          "prepared_scratch_required_bytes": 15,
+          "local_trace_checksum_hex": "69fe3f04dc0d4500",
+          "local_trace_output_bytes": 1217639,
+          "setup": {
+            "build": {
+              "median_ns": 2207944.0,
+              "elapsed_ns": [
+                2238736,
+                2191053,
+                2207944
+              ]
+            },
+            "structural_open": {
+              "median_ns": 101221.0,
+              "elapsed_ns": [
+                91028,
+                105671,
+                87451,
+                101221,
+                114345,
+                97379,
+                118416
+              ]
+            },
+            "normal_open": {
+              "median_ns": 214338.0,
+              "elapsed_ns": [
+                214338,
+                235829,
+                210567,
+                234601,
+                207855,
+                240696,
+                209446
+              ]
+            },
+            "full_validation": {
+              "median_ns": 5597049.0,
+              "elapsed_ns": [
+                5701958,
+                5539361,
+                5597049,
+                5525992,
+                5636448,
+                5578341,
+                5613063
+              ]
+            },
+            "prepare": {
+              "median_ns": 5575276.0,
+              "elapsed_ns": [
+                5434152,
+                5401618,
+                5575276,
+                5659019,
+                5661079,
+                5574006,
+                5710500
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 51.546,
+              "elapsed_ns": [
+                10265428,
+                10309284,
+                10010037,
+                10456243,
+                10448522,
+                10464571,
+                10090809
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 53.589,
+              "elapsed_ns": [
+                10614330,
+                10704176,
+                10727094,
+                10735947,
+                10649258,
+                10787923,
+                10717806
+              ]
+            }
+          },
+          "file_sha256": "29d7c6443b115ce31f0d8c7c6283872ec0aaa04b8d52b4c55a1cae6dd755fcbf",
+          "build_allocations": {
+            "allocation_calls": [
+              29991,
+              29991,
+              29991
+            ],
+            "requested_bytes": [
+              5905695,
+              5905695,
+              5905695
+            ],
+            "peak_live_bytes": [
+              2185174,
+              2185174,
+              2185174
+            ],
+            "live_bytes_at_return": [
+              76924,
+              76924,
+              76924
+            ],
+            "returned_table_capacity_bytes": [
+              76924,
+              76924,
+              76924
+            ]
+          }
+        },
+        {
+          "mode": "compact",
+          "format_version": 3,
+          "file_bytes": 70868,
+          "decoded_bytes": 178667,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 70357,
+          "raw_rows": 56,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 29273,
+          "ef_power_of_two_rows": 0,
+          "groups": 14,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 2096,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 3668,
+          "prepared_hint_bytes": 3668,
+          "checked_scratch_capacity_bytes": 15,
+          "prepared_scratch_required_bytes": 15,
+          "local_trace_checksum_hex": "69fe3f04dc0d4500",
+          "local_trace_output_bytes": 1217639,
+          "setup": {
+            "build": {
+              "median_ns": 60480226.0,
+              "elapsed_ns": [
+                60480226,
+                60667454,
+                59492060
+              ]
+            },
+            "structural_open": {
+              "median_ns": 97144.0,
+              "elapsed_ns": [
+                94133,
+                97144,
+                98550,
+                120848,
+                95391,
+                96279,
+                125107
+              ]
+            },
+            "normal_open": {
+              "median_ns": 210749.0,
+              "elapsed_ns": [
+                200359,
+                232214,
+                206896,
+                215396,
+                241395,
+                210749,
+                199795
+              ]
+            },
+            "full_validation": {
+              "median_ns": 5787407.0,
+              "elapsed_ns": [
+                5632042,
+                5902513,
+                5725500,
+                5776284,
+                5791399,
+                5869325,
+                5787407
+              ]
+            },
+            "prepare": {
+              "median_ns": 5716444.0,
+              "elapsed_ns": [
+                5716444,
+                5735066,
+                5748412,
+                5671114,
+                5710478,
+                5583469,
+                5789540
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 52.712,
+              "elapsed_ns": [
+                10466262,
+                10392873,
+                10542447,
+                10523689,
+                10589106,
+                10572404,
+                10556801
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 54.438,
+              "elapsed_ns": [
+                11238721,
+                10930769,
+                10784785,
+                10849878,
+                10887525,
+                10884676,
+                10994155
+              ]
+            }
+          },
+          "file_sha256": "adf902a86dcd4cbc35ef20827bf3a9ec4e84a8a5db86c5a208bc9fbf40c5a5fc",
+          "build_allocations": {
+            "allocation_calls": [
+              149339,
+              149339,
+              149339
+            ],
+            "requested_bytes": [
+              16425821,
+              16425821,
+              16425821
+            ],
+            "peak_live_bytes": [
+              2460944,
+              2460944,
+              2460944
+            ],
+            "live_bytes_at_return": [
+              70868,
+              70868,
+              70868
+            ],
+            "returned_table_capacity_bytes": [
+              70868,
+              70868,
+              70868
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "multilingual_and_long",
+      "rows": 6165,
+      "matched_trace_checksum_hex": "615305bda52de9cb",
+      "matched_trace_output_bytes": 8408194,
+      "loaded_vector": {
+        "inline_bytes": 24,
+        "retained_heap_bytes": 515867,
+        "scratch_bytes": 7521,
+        "matched_retrieval": {
+          "median_ns_per_value": 48.55,
+          "elapsed_ns": [
+            9775145,
+            9687549,
+            9522943,
+            9710053,
+            9685761,
+            9741190,
+            9929002
+          ]
+        }
+      },
+      "modes": [
+        {
+          "mode": "raw",
+          "format_version": 2,
+          "file_bytes": 258203,
+          "decoded_bytes": 257819,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 0,
+          "raw_rows": 6165,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 0,
+          "ef_power_of_two_rows": 0,
+          "groups": 20,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 800,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 3084,
+          "prepared_hint_bytes": 3084,
+          "checked_scratch_capacity_bytes": 7521,
+          "prepared_scratch_required_bytes": 7521,
+          "local_trace_checksum_hex": "d15b537ad4d389f0",
+          "local_trace_output_bytes": 8408200,
+          "setup": {
+            "build": {
+              "median_ns": 895469.0,
+              "elapsed_ns": [
+                895469,
+                902156,
+                894584
+              ]
+            },
+            "structural_open": {
+              "median_ns": 1263.0,
+              "elapsed_ns": [
+                511,
+                1810,
+                1263,
+                1388,
+                1830,
+                925,
+                845
+              ]
+            },
+            "normal_open": {
+              "median_ns": 425331.0,
+              "elapsed_ns": [
+                425412,
+                423561,
+                413565,
+                423583,
+                429580,
+                425331,
+                444838
+              ]
+            },
+            "full_validation": {
+              "median_ns": 1386803.0,
+              "elapsed_ns": [
+                1387504,
+                1386803,
+                1370853,
+                1396166,
+                1370663,
+                1427308,
+                1369707
+              ]
+            },
+            "prepare": {
+              "median_ns": 1360023.0,
+              "elapsed_ns": [
+                1365233,
+                1363302,
+                1360023,
+                1314983,
+                1326187,
+                1373317,
+                1350916
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 54.048,
+              "elapsed_ns": [
+                10902386,
+                10671829,
+                10938309,
+                10721302,
+                10809565,
+                10798352,
+                10953786
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 55.242,
+              "elapsed_ns": [
+                11041299,
+                10868305,
+                11048370,
+                11075337,
+                11131540,
+                10878062,
+                11065660
+              ]
+            }
+          },
+          "file_sha256": "05043ee8ba9ab4ca242319104f309f0db31b9e3895a5177575a4f2ea92bf4e8d",
+          "build_allocations": {
+            "allocation_calls": [
+              6231,
+              6231,
+              6231
+            ],
+            "requested_bytes": [
+              1209550,
+              1209550,
+              1209550
+            ],
+            "peak_live_bytes": [
+              863446,
+              863446,
+              863446
+            ],
+            "live_bytes_at_return": [
+              258203,
+              258203,
+              258203
+            ],
+            "returned_table_capacity_bytes": [
+              258203,
+              258203,
+              258203
+            ]
+          }
+        },
+        {
+          "mode": "phrase",
+          "format_version": 2,
+          "file_bytes": 112163,
+          "decoded_bytes": 257819,
+          "dictionary_bytes": 1080,
+          "elias_fano_bytes": 0,
+          "raw_rows": 21,
+          "phrase_rows": 6144,
+          "ef_mixed_rows": 0,
+          "ef_power_of_two_rows": 0,
+          "groups": 19,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 3512,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 5388,
+          "prepared_hint_bytes": 3084,
+          "checked_scratch_capacity_bytes": 7521,
+          "prepared_scratch_required_bytes": 7528,
+          "local_trace_checksum_hex": "ff3c34f7799db78a",
+          "local_trace_output_bytes": 8340074,
+          "setup": {
+            "build": {
+              "median_ns": 47861773.0,
+              "elapsed_ns": [
+                47133609,
+                47861773,
+                48363774
+              ]
+            },
+            "structural_open": {
+              "median_ns": 19827.0,
+              "elapsed_ns": [
+                21581,
+                20984,
+                19827,
+                20526,
+                19825,
+                19354,
+                17055
+              ]
+            },
+            "normal_open": {
+              "median_ns": 198621.0,
+              "elapsed_ns": [
+                200149,
+                195651,
+                219672,
+                199253,
+                198621,
+                194569,
+                197137
+              ]
+            },
+            "full_validation": {
+              "median_ns": 1228676.0,
+              "elapsed_ns": [
+                1228676,
+                1178819,
+                1215764,
+                1252375,
+                1236921,
+                1238052,
+                1201214
+              ]
+            },
+            "prepare": {
+              "median_ns": 1176975.0,
+              "elapsed_ns": [
+                1176975,
+                1138751,
+                1169948,
+                1214666,
+                1207356,
+                1166845,
+                1190286
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 56.031,
+              "elapsed_ns": [
+                11227116,
+                10904615,
+                11095674,
+                11254105,
+                11250569,
+                11069105,
+                11206277
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 55.884,
+              "elapsed_ns": [
+                11175560,
+                11050263,
+                10933885,
+                11221971,
+                11231421,
+                11186356,
+                11176710
+              ]
+            }
+          },
+          "file_sha256": "635d48e8457926c877f7f37ba77334489d2ea59b096f2235d34d6e0e5ca1ca9d",
+          "build_allocations": {
+            "allocation_calls": [
+              36684,
+              36684,
+              36684
+            ],
+            "requested_bytes": [
+              4490121,
+              4490121,
+              4490121
+            ],
+            "peak_live_bytes": [
+              1493604,
+              1493604,
+              1493604
+            ],
+            "live_bytes_at_return": [
+              112163,
+              112163,
+              112163
+            ],
+            "returned_table_capacity_bytes": [
+              112163,
+              112163,
+              112163
+            ]
+          }
+        },
+        {
+          "mode": "elias_fano_mixed",
+          "format_version": 3,
+          "file_bytes": 80484,
+          "decoded_bytes": 257819,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 2505,
+          "raw_rows": 21,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 6144,
+          "ef_power_of_two_rows": 0,
+          "groups": 20,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 1184,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 3084,
+          "prepared_hint_bytes": 3084,
+          "checked_scratch_capacity_bytes": 7521,
+          "prepared_scratch_required_bytes": 7521,
+          "local_trace_checksum_hex": "616775229f5471a2",
+          "local_trace_output_bytes": 8339300,
+          "setup": {
+            "build": {
+              "median_ns": 1292523.0,
+              "elapsed_ns": [
+                1303321,
+                1276839,
+                1292523
+              ]
+            },
+            "structural_open": {
+              "median_ns": 13039.0,
+              "elapsed_ns": [
+                13039,
+                12366,
+                13678,
+                13722,
+                13745,
+                12927,
+                12280
+              ]
+            },
+            "normal_open": {
+              "median_ns": 143699.0,
+              "elapsed_ns": [
+                143811,
+                143226,
+                139860,
+                143699,
+                147728,
+                167532,
+                143469
+              ]
+            },
+            "full_validation": {
+              "median_ns": 1581572.0,
+              "elapsed_ns": [
+                1592522,
+                1578593,
+                1576510,
+                1612503,
+                1581572,
+                1581543,
+                1591103
+              ]
+            },
+            "prepare": {
+              "median_ns": 1567940.0,
+              "elapsed_ns": [
+                1575354,
+                1575451,
+                1531879,
+                1531653,
+                1535109,
+                1567940,
+                1592589
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 132.536,
+              "elapsed_ns": [
+                26507258,
+                26463782,
+                26190975,
+                26535099,
+                25939477,
+                26521267,
+                26536759
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 133.11,
+              "elapsed_ns": [
+                26548648,
+                26767979,
+                26622031,
+                26351458,
+                26302440,
+                26775106,
+                26785822
+              ]
+            }
+          },
+          "file_sha256": "d18512fb30933d72e74e9cb1b194287403ee0040cbbbe02d564fe5e69e97d430",
+          "build_allocations": {
+            "allocation_calls": [
+              6436,
+              6436,
+              6436
+            ],
+            "requested_bytes": [
+              1570969,
+              1570969,
+              1570969
+            ],
+            "peak_live_bytes": [
+              898987,
+              898987,
+              898987
+            ],
+            "live_bytes_at_return": [
+              80484,
+              80484,
+              80484
+            ],
+            "returned_table_capacity_bytes": [
+              80484,
+              80484,
+              80484
+            ]
+          }
+        },
+        {
+          "mode": "elias_fano_power_of_two",
+          "format_version": 3,
+          "file_bytes": 81948,
+          "decoded_bytes": 257819,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 3969,
+          "raw_rows": 21,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 0,
+          "ef_power_of_two_rows": 6144,
+          "groups": 20,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 1184,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 3084,
+          "prepared_hint_bytes": 3084,
+          "checked_scratch_capacity_bytes": 7521,
+          "prepared_scratch_required_bytes": 7521,
+          "local_trace_checksum_hex": "616775229f5471a2",
+          "local_trace_output_bytes": 8339300,
+          "setup": {
+            "build": {
+              "median_ns": 1282123.0,
+              "elapsed_ns": [
+                1302109,
+                1282123,
+                1282084
+              ]
+            },
+            "structural_open": {
+              "median_ns": 18135.0,
+              "elapsed_ns": [
+                17429,
+                18723,
+                19120,
+                18135,
+                18335,
+                17994,
+                17361
+              ]
+            },
+            "normal_open": {
+              "median_ns": 149315.0,
+              "elapsed_ns": [
+                147922,
+                151447,
+                149315,
+                148099,
+                148362,
+                150898,
+                150677
+              ]
+            },
+            "full_validation": {
+              "median_ns": 1491535.0,
+              "elapsed_ns": [
+                1479295,
+                1500240,
+                1480639,
+                1506125,
+                1491535,
+                1486824,
+                1505608
+              ]
+            },
+            "prepare": {
+              "median_ns": 1476576.0,
+              "elapsed_ns": [
+                1477864,
+                1481991,
+                1464623,
+                1442130,
+                1439018,
+                1491233,
+                1476576
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 118.135,
+              "elapsed_ns": [
+                23627084,
+                23773823,
+                23236851,
+                23609385,
+                23404461,
+                23660542,
+                23641908
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 118.507,
+              "elapsed_ns": [
+                23700901,
+                23800423,
+                23701452,
+                23606130,
+                23627876,
+                23819603,
+                23754885
+              ]
+            }
+          },
+          "file_sha256": "fa65d01f78df939f374f937dfb3c9fd6229356f6134e0aea53f59fedc97917f2",
+          "build_allocations": {
+            "allocation_calls": [
+              6436,
+              6436,
+              6436
+            ],
+            "requested_bytes": [
+              1575361,
+              1575361,
+              1575361
+            ],
+            "peak_live_bytes": [
+              901915,
+              901915,
+              901915
+            ],
+            "live_bytes_at_return": [
+              81948,
+              81948,
+              81948
+            ],
+            "returned_table_capacity_bytes": [
+              81948,
+              81948,
+              81948
+            ]
+          }
+        },
+        {
+          "mode": "compact",
+          "format_version": 3,
+          "file_bytes": 80484,
+          "decoded_bytes": 257819,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 2505,
+          "raw_rows": 21,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 6144,
+          "ef_power_of_two_rows": 0,
+          "groups": 20,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 1184,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 3084,
+          "prepared_hint_bytes": 3084,
+          "checked_scratch_capacity_bytes": 7521,
+          "prepared_scratch_required_bytes": 7521,
+          "local_trace_checksum_hex": "616775229f5471a2",
+          "local_trace_output_bytes": 8339300,
+          "setup": {
+            "build": {
+              "median_ns": 48116489.0,
+              "elapsed_ns": [
+                47705549,
+                48116489,
+                48156953
+              ]
+            },
+            "structural_open": {
+              "median_ns": 13059.0,
+              "elapsed_ns": [
+                11986,
+                14531,
+                14361,
+                13571,
+                13059,
+                12405,
+                12334
+              ]
+            },
+            "normal_open": {
+              "median_ns": 143488.0,
+              "elapsed_ns": [
+                143355,
+                141161,
+                143838,
+                144313,
+                135706,
+                143529,
+                143488
+              ]
+            },
+            "full_validation": {
+              "median_ns": 1588721.0,
+              "elapsed_ns": [
+                1620324,
+                1601760,
+                1646195,
+                1588721,
+                1554120,
+                1571746,
+                1576823
+              ]
+            },
+            "prepare": {
+              "median_ns": 1569280.0,
+              "elapsed_ns": [
+                1562985,
+                1549121,
+                1679885,
+                1550636,
+                1582978,
+                1569280,
+                1569386
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 132.216,
+              "elapsed_ns": [
+                26617901,
+                26338437,
+                26007439,
+                26270670,
+                26443108,
+                26534123,
+                26502618
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 132.45,
+              "elapsed_ns": [
+                26708615,
+                26489912,
+                26212071,
+                26461754,
+                26392020,
+                26817472,
+                26839384
+              ]
+            }
+          },
+          "file_sha256": "d18512fb30933d72e74e9cb1b194287403ee0040cbbbe02d564fe5e69e97d430",
+          "build_allocations": {
+            "allocation_calls": [
+              37044,
+              37044,
+              37044
+            ],
+            "requested_bytes": [
+              5018647,
+              5018647,
+              5018647
+            ],
+            "peak_live_bytes": [
+              1493604,
+              1493604,
+              1493604
+            ],
+            "live_bytes_at_return": [
+              80484,
+              80484,
+              80484
+            ],
+            "returned_table_capacity_bytes": [
+              80484,
+              80484,
+              80484
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "high_entropy",
+      "rows": 2048,
+      "matched_trace_checksum_hex": "b2c4075f27bdb8f7",
+      "matched_trace_output_bytes": 9600000,
+      "loaded_vector": {
+        "inline_bytes": 24,
+        "retained_heap_bytes": 180224,
+        "scratch_bytes": 48,
+        "matched_retrieval": {
+          "median_ns_per_value": 39.767,
+          "elapsed_ns": [
+            8117904,
+            7800712,
+            7925791,
+            8105468,
+            8039031,
+            7953487,
+            7924818
+          ]
+        }
+      },
+      "modes": [
+        {
+          "mode": "raw",
+          "format_version": 2,
+          "file_bytes": 98384,
+          "decoded_bytes": 98304,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 0,
+          "raw_rows": 2048,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 0,
+          "ef_power_of_two_rows": 0,
+          "groups": 1,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 40,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 0,
+          "prepared_hint_bytes": 0,
+          "checked_scratch_capacity_bytes": 48,
+          "prepared_scratch_required_bytes": 48,
+          "local_trace_checksum_hex": "b2c4075f27bdb8f7",
+          "local_trace_output_bytes": 9600000,
+          "setup": {
+            "build": {
+              "median_ns": 222138.0,
+              "elapsed_ns": [
+                227281,
+                221623,
+                222138
+              ]
+            },
+            "structural_open": {
+              "median_ns": 357.0,
+              "elapsed_ns": [
+                1187,
+                357,
+                705,
+                398,
+                225,
+                152,
+                224
+              ]
+            },
+            "normal_open": {
+              "median_ns": 158173.0,
+              "elapsed_ns": [
+                158592,
+                155133,
+                158173,
+                158084,
+                162731,
+                176956,
+                158007
+              ]
+            },
+            "full_validation": {
+              "median_ns": 375215.0,
+              "elapsed_ns": [
+                383550,
+                374889,
+                379650,
+                372194,
+                375215,
+                368706,
+                375338
+              ]
+            },
+            "prepare": {
+              "median_ns": 364890.0,
+              "elapsed_ns": [
+                369569,
+                355767,
+                364890,
+                367366,
+                368056,
+                363904,
+                364652
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 48.008,
+              "elapsed_ns": [
+                9607772,
+                9399932,
+                9589171,
+                9601570,
+                9758028,
+                9573550,
+                9614411
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 48.686,
+              "elapsed_ns": [
+                9699134,
+                9491329,
+                9825800,
+                9741701,
+                9737291,
+                9664857,
+                10009237
+              ]
+            }
+          },
+          "file_sha256": "f456440a87b67444c292fd5d81f4a4d05bcda90c27eac8d010cebf9aec77bbce",
+          "build_allocations": {
+            "allocation_calls": [
+              2072,
+              2072,
+              2072
+            ],
+            "requested_bytes": [
+              394152,
+              394152,
+              394152
+            ],
+            "peak_live_bytes": [
+              295536,
+              295536,
+              295536
+            ],
+            "live_bytes_at_return": [
+              98384,
+              98384,
+              98384
+            ],
+            "returned_table_capacity_bytes": [
+              98384,
+              98384,
+              98384
+            ]
+          }
+        },
+        {
+          "mode": "phrase",
+          "format_version": 2,
+          "file_bytes": 93809,
+          "decoded_bytes": 98304,
+          "dictionary_bytes": 674,
+          "elias_fano_bytes": 0,
+          "raw_rows": 0,
+          "phrase_rows": 2048,
+          "ef_mixed_rows": 0,
+          "ef_power_of_two_rows": 0,
+          "groups": 7,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 4376,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 6400,
+          "prepared_hint_bytes": 4096,
+          "checked_scratch_capacity_bytes": 48,
+          "prepared_scratch_required_bytes": 55,
+          "local_trace_checksum_hex": "910dfe133cbe92a7",
+          "local_trace_output_bytes": 9600000,
+          "setup": {
+            "build": {
+              "median_ns": 82597028.0,
+              "elapsed_ns": [
+                84323184,
+                82597028,
+                82480154
+              ]
+            },
+            "structural_open": {
+              "median_ns": 40242.0,
+              "elapsed_ns": [
+                38087,
+                42361,
+                44820,
+                40339,
+                40242,
+                39087,
+                37989
+              ]
+            },
+            "normal_open": {
+              "median_ns": 191240.0,
+              "elapsed_ns": [
+                191711,
+                184992,
+                191240,
+                192458,
+                188495,
+                193362,
+                188694
+              ]
+            },
+            "full_validation": {
+              "median_ns": 635771.0,
+              "elapsed_ns": [
+                662728,
+                642434,
+                624425,
+                635771,
+                620732,
+                614373,
+                655425
+              ]
+            },
+            "prepare": {
+              "median_ns": 624125.0,
+              "elapsed_ns": [
+                660711,
+                605315,
+                624125,
+                632157,
+                616819,
+                619108,
+                644688
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 66.62,
+              "elapsed_ns": [
+                13621922,
+                13043254,
+                13271425,
+                13518264,
+                13356852,
+                13324030,
+                13312083
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 67.126,
+              "elapsed_ns": [
+                13432617,
+                13187351,
+                13386010,
+                13738254,
+                13413861,
+                13548400,
+                13425163
+              ]
+            }
+          },
+          "file_sha256": "0241ce24c972b4f594611e136b18dddde859331c796b685d91e550f8eb239448",
+          "build_allocations": {
+            "allocation_calls": [
+              14252,
+              14252,
+              14252
+            ],
+            "requested_bytes": [
+              2523664,
+              2523664,
+              2523664
+            ],
+            "peak_live_bytes": [
+              954344,
+              954344,
+              954344
+            ],
+            "live_bytes_at_return": [
+              93809,
+              93809,
+              93809
+            ],
+            "returned_table_capacity_bytes": [
+              93809,
+              93809,
+              93809
+            ]
+          }
+        },
+        {
+          "mode": "elias_fano_mixed",
+          "format_version": 2,
+          "file_bytes": 98384,
+          "decoded_bytes": 98304,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 0,
+          "raw_rows": 2048,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 0,
+          "ef_power_of_two_rows": 0,
+          "groups": 1,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 40,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 0,
+          "prepared_hint_bytes": 0,
+          "checked_scratch_capacity_bytes": 48,
+          "prepared_scratch_required_bytes": 48,
+          "local_trace_checksum_hex": "b2c4075f27bdb8f7",
+          "local_trace_output_bytes": 9600000,
+          "setup": {
+            "build": {
+              "median_ns": 245600.0,
+              "elapsed_ns": [
+                257768,
+                239450,
+                245600
+              ]
+            },
+            "structural_open": {
+              "median_ns": 319.0,
+              "elapsed_ns": [
+                450,
+                510,
+                319,
+                700,
+                99,
+                107,
+                144
+              ]
+            },
+            "normal_open": {
+              "median_ns": 182946.0,
+              "elapsed_ns": [
+                183899,
+                155496,
+                178440,
+                197408,
+                182946,
+                157968,
+                186339
+              ]
+            },
+            "full_validation": {
+              "median_ns": 389930.0,
+              "elapsed_ns": [
+                406558,
+                384498,
+                400995,
+                389930,
+                397691,
+                366633,
+                370041
+              ]
+            },
+            "prepare": {
+              "median_ns": 364237.0,
+              "elapsed_ns": [
+                357814,
+                357907,
+                363002,
+                373519,
+                364770,
+                367338,
+                364237
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 47.889,
+              "elapsed_ns": [
+                9698336,
+                9577830,
+                9575941,
+                9718237,
+                9557698,
+                9563299,
+                9581925
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 48.295,
+              "elapsed_ns": [
+                9756814,
+                9659021,
+                9711070,
+                9680902,
+                9634614,
+                9638844,
+                9641613
+              ]
+            }
+          },
+          "file_sha256": "f456440a87b67444c292fd5d81f4a4d05bcda90c27eac8d010cebf9aec77bbce",
+          "build_allocations": {
+            "allocation_calls": [
+              2142,
+              2142,
+              2142
+            ],
+            "requested_bytes": [
+              527824,
+              527824,
+              527824
+            ],
+            "peak_live_bytes": [
+              328672,
+              328672,
+              328672
+            ],
+            "live_bytes_at_return": [
+              98384,
+              98384,
+              98384
+            ],
+            "returned_table_capacity_bytes": [
+              98384,
+              98384,
+              98384
+            ]
+          }
+        },
+        {
+          "mode": "elias_fano_power_of_two",
+          "format_version": 2,
+          "file_bytes": 98384,
+          "decoded_bytes": 98304,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 0,
+          "raw_rows": 2048,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 0,
+          "ef_power_of_two_rows": 0,
+          "groups": 1,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 40,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 0,
+          "prepared_hint_bytes": 0,
+          "checked_scratch_capacity_bytes": 48,
+          "prepared_scratch_required_bytes": 48,
+          "local_trace_checksum_hex": "b2c4075f27bdb8f7",
+          "local_trace_output_bytes": 9600000,
+          "setup": {
+            "build": {
+              "median_ns": 244912.0,
+              "elapsed_ns": [
+                244912,
+                235528,
+                245225
+              ]
+            },
+            "structural_open": {
+              "median_ns": 338.0,
+              "elapsed_ns": [
+                416,
+                534,
+                347,
+                275,
+                338,
+                159,
+                150
+              ]
+            },
+            "normal_open": {
+              "median_ns": 157987.0,
+              "elapsed_ns": [
+                161984,
+                158182,
+                155783,
+                157995,
+                157987,
+                157983,
+                157944
+              ]
+            },
+            "full_validation": {
+              "median_ns": 368420.0,
+              "elapsed_ns": [
+                386974,
+                386277,
+                368420,
+                372620,
+                366329,
+                365193,
+                367398
+              ]
+            },
+            "prepare": {
+              "median_ns": 363382.0,
+              "elapsed_ns": [
+                371269,
+                369121,
+                358725,
+                363994,
+                362825,
+                363382,
+                361250
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 47.918,
+              "elapsed_ns": [
+                9826610,
+                9604073,
+                9564100,
+                9589000,
+                9576466,
+                9583540,
+                9553862
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 48.309,
+              "elapsed_ns": [
+                9797612,
+                9679228,
+                9598092,
+                9694524,
+                9631406,
+                9661717,
+                9637986
+              ]
+            }
+          },
+          "file_sha256": "f456440a87b67444c292fd5d81f4a4d05bcda90c27eac8d010cebf9aec77bbce",
+          "build_allocations": {
+            "allocation_calls": [
+              2142,
+              2142,
+              2142
+            ],
+            "requested_bytes": [
+              527824,
+              527824,
+              527824
+            ],
+            "peak_live_bytes": [
+              328672,
+              328672,
+              328672
+            ],
+            "live_bytes_at_return": [
+              98384,
+              98384,
+              98384
+            ],
+            "returned_table_capacity_bytes": [
+              98384,
+              98384,
+              98384
+            ]
+          }
+        },
+        {
+          "mode": "compact",
+          "format_version": 2,
+          "file_bytes": 93809,
+          "decoded_bytes": 98304,
+          "dictionary_bytes": 674,
+          "elias_fano_bytes": 0,
+          "raw_rows": 0,
+          "phrase_rows": 2048,
+          "ef_mixed_rows": 0,
+          "ef_power_of_two_rows": 0,
+          "groups": 7,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 4376,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 6400,
+          "prepared_hint_bytes": 4096,
+          "checked_scratch_capacity_bytes": 48,
+          "prepared_scratch_required_bytes": 55,
+          "local_trace_checksum_hex": "910dfe133cbe92a7",
+          "local_trace_output_bytes": 9600000,
+          "setup": {
+            "build": {
+              "median_ns": 82999712.0,
+              "elapsed_ns": [
+                83542348,
+                82884899,
+                82999712
+              ]
+            },
+            "structural_open": {
+              "median_ns": 41696.0,
+              "elapsed_ns": [
+                47525,
+                45859,
+                43846,
+                41696,
+                39560,
+                38834,
+                38742
+              ]
+            },
+            "normal_open": {
+              "median_ns": 190927.0,
+              "elapsed_ns": [
+                194137,
+                190927,
+                194659,
+                188303,
+                191518,
+                188068,
+                190303
+              ]
+            },
+            "full_validation": {
+              "median_ns": 624366.0,
+              "elapsed_ns": [
+                695532,
+                624366,
+                659305,
+                621332,
+                615607,
+                619453,
+                658313
+              ]
+            },
+            "prepare": {
+              "median_ns": 620877.0,
+              "elapsed_ns": [
+                661800,
+                620877,
+                631578,
+                619193,
+                618759,
+                617000,
+                646650
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 66.255,
+              "elapsed_ns": [
+                13455539,
+                13181368,
+                13420092,
+                13332911,
+                13109171,
+                13250990,
+                13152443
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 66.645,
+              "elapsed_ns": [
+                13677889,
+                13241199,
+                13379128,
+                13334566,
+                13288764,
+                13308778,
+                13329021
+              ]
+            }
+          },
+          "file_sha256": "0241ce24c972b4f594611e136b18dddde859331c796b685d91e550f8eb239448",
+          "build_allocations": {
+            "allocation_calls": [
+              14381,
+              14381,
+              14381
+            ],
+            "requested_bytes": [
+              2725168,
+              2725168,
+              2725168
+            ],
+            "peak_live_bytes": [
+              954344,
+              954344,
+              954344
+            ],
+            "live_bytes_at_return": [
+              93809,
+              93809,
+              93809
+            ],
+            "returned_table_capacity_bytes": [
+              93809,
+              93809,
+              93809
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "small_urls_and_ids",
+      "rows": 64,
+      "matched_trace_checksum_hex": "c6adc5d43a45733e",
+      "matched_trace_output_bytes": 7312710,
+      "loaded_vector": {
+        "inline_bytes": 24,
+        "retained_heap_bytes": 5184,
+        "scratch_bytes": 57,
+        "matched_retrieval": {
+          "median_ns_per_value": 30.941,
+          "elapsed_ns": [
+            6114238,
+            6178695,
+            5976052,
+            6235670,
+            6202454,
+            6271886,
+            6188194
+          ]
+        }
+      },
+      "modes": [
+        {
+          "mode": "raw",
+          "format_version": 2,
+          "file_bytes": 2432,
+          "decoded_bytes": 2336,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 0,
+          "raw_rows": 64,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 0,
+          "ef_power_of_two_rows": 0,
+          "groups": 2,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 80,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 256,
+          "prepared_hint_bytes": 256,
+          "checked_scratch_capacity_bytes": 57,
+          "prepared_scratch_required_bytes": 57,
+          "local_trace_checksum_hex": "5367d64429fbbe02",
+          "local_trace_output_bytes": 7289340,
+          "setup": {
+            "build": {
+              "median_ns": 8404.0,
+              "elapsed_ns": [
+                8467,
+                8404,
+                8314
+              ]
+            },
+            "structural_open": {
+              "median_ns": 784.0,
+              "elapsed_ns": [
+                873,
+                784,
+                342,
+                605,
+                413,
+                1155,
+                878
+              ]
+            },
+            "normal_open": {
+              "median_ns": 4589.0,
+              "elapsed_ns": [
+                4972,
+                4908,
+                4268,
+                4589,
+                4491,
+                5713,
+                4478
+              ]
+            },
+            "full_validation": {
+              "median_ns": 16007.0,
+              "elapsed_ns": [
+                16685,
+                17185,
+                13272,
+                16007,
+                15382,
+                19933,
+                15521
+              ]
+            },
+            "prepare": {
+              "median_ns": 9888.0,
+              "elapsed_ns": [
+                9759,
+                10043,
+                9339,
+                9888,
+                9621,
+                12647,
+                9958
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 40.883,
+              "elapsed_ns": [
+                8176597,
+                8281579,
+                7971331,
+                8133315,
+                8151326,
+                8260162,
+                8238456
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 40.868,
+              "elapsed_ns": [
+                8190833,
+                8173628,
+                7952748,
+                8222574,
+                8140583,
+                8210839,
+                8054824
+              ]
+            }
+          },
+          "file_sha256": "ad5785fd0a17d6c35d3d2840b26e4cfc2285a76f75bf80eb99a16ee98611e690",
+          "build_allocations": {
+            "allocation_calls": [
+              81,
+              81,
+              81
+            ],
+            "requested_bytes": [
+              11720,
+              11720,
+              11720
+            ],
+            "peak_live_bytes": [
+              8384,
+              8384,
+              8384
+            ],
+            "live_bytes_at_return": [
+              2432,
+              2432,
+              2432
+            ],
+            "returned_table_capacity_bytes": [
+              2432,
+              2432,
+              2432
+            ]
+          }
+        },
+        {
+          "mode": "phrase",
+          "format_version": 2,
+          "file_bytes": 675,
+          "decoded_bytes": 2336,
+          "dictionary_bytes": 131,
+          "elias_fano_bytes": 0,
+          "raw_rows": 0,
+          "phrase_rows": 64,
+          "ef_mixed_rows": 0,
+          "ef_power_of_two_rows": 0,
+          "groups": 2,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 560,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 2560,
+          "prepared_hint_bytes": 256,
+          "checked_scratch_capacity_bytes": 57,
+          "prepared_scratch_required_bytes": 64,
+          "local_trace_checksum_hex": "5367d64429fbbe02",
+          "local_trace_output_bytes": 7289340,
+          "setup": {
+            "build": {
+              "median_ns": 1485862.0,
+              "elapsed_ns": [
+                1485862,
+                1486230,
+                1477065
+              ]
+            },
+            "structural_open": {
+              "median_ns": 1642.0,
+              "elapsed_ns": [
+                1127,
+                1803,
+                1283,
+                1642,
+                1480,
+                2151,
+                2085
+              ]
+            },
+            "normal_open": {
+              "median_ns": 2158.0,
+              "elapsed_ns": [
+                2050,
+                2155,
+                2158,
+                2175,
+                2071,
+                2336,
+                2421
+              ]
+            },
+            "full_validation": {
+              "median_ns": 12765.0,
+              "elapsed_ns": [
+                8623,
+                13806,
+                7863,
+                12765,
+                9297,
+                13813,
+                14887
+              ]
+            },
+            "prepare": {
+              "median_ns": 7928.0,
+              "elapsed_ns": [
+                7365,
+                8651,
+                7142,
+                7928,
+                7707,
+                8145,
+                8543
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 43.711,
+              "elapsed_ns": [
+                8780331,
+                8502838,
+                8435972,
+                8742279,
+                8818031,
+                8802955,
+                8665219
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 43.47,
+              "elapsed_ns": [
+                8793624,
+                8554919,
+                8443289,
+                8693938,
+                8629206,
+                8704255,
+                8752093
+              ]
+            }
+          },
+          "file_sha256": "c7d8c5c4382a3e3e9568997d466ba757a1f5f36837bccff789a5a7bae0bae439",
+          "build_allocations": {
+            "allocation_calls": [
+              457,
+              457,
+              457
+            ],
+            "requested_bytes": [
+              558502,
+              558502,
+              558502
+            ],
+            "peak_live_bytes": [
+              541346,
+              541346,
+              541346
+            ],
+            "live_bytes_at_return": [
+              675,
+              675,
+              675
+            ],
+            "returned_table_capacity_bytes": [
+              675,
+              675,
+              675
+            ]
+          }
+        },
+        {
+          "mode": "elias_fano_mixed",
+          "format_version": 3,
+          "file_bytes": 407,
+          "decoded_bytes": 2336,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 311,
+          "raw_rows": 0,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 64,
+          "ef_power_of_two_rows": 0,
+          "groups": 2,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 464,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 256,
+          "prepared_hint_bytes": 256,
+          "checked_scratch_capacity_bytes": 57,
+          "prepared_scratch_required_bytes": 57,
+          "local_trace_checksum_hex": "5367d64429fbbe02",
+          "local_trace_output_bytes": 7289340,
+          "setup": {
+            "build": {
+              "median_ns": 19906.0,
+              "elapsed_ns": [
+                20375,
+                18820,
+                19906
+              ]
+            },
+            "structural_open": {
+              "median_ns": 1548.0,
+              "elapsed_ns": [
+                619,
+                1858,
+                848,
+                1711,
+                1398,
+                2082,
+                1548
+              ]
+            },
+            "normal_open": {
+              "median_ns": 1652.0,
+              "elapsed_ns": [
+                1146,
+                1652,
+                1610,
+                1781,
+                1597,
+                1762,
+                2477
+              ]
+            },
+            "full_validation": {
+              "median_ns": 19069.0,
+              "elapsed_ns": [
+                15163,
+                17451,
+                15318,
+                20388,
+                19069,
+                20993,
+                20425
+              ]
+            },
+            "prepare": {
+              "median_ns": 15433.0,
+              "elapsed_ns": [
+                16493,
+                12653,
+                14406,
+                15433,
+                15120,
+                16360,
+                15639
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 119.26,
+              "elapsed_ns": [
+                24196272,
+                23850198,
+                23312835,
+                23998335,
+                24171174,
+                23851967,
+                23723560
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 120.376,
+              "elapsed_ns": [
+                24314527,
+                23556622,
+                23467928,
+                24078902,
+                24256775,
+                24075240,
+                23714731
+              ]
+            }
+          },
+          "file_sha256": "e2d14f7fe026f2f19a98cc62be8086cdf289b0fff458c54d9dbf15e29df2d73a",
+          "build_allocations": {
+            "allocation_calls": [
+              185,
+              185,
+              185
+            ],
+            "requested_bytes": [
+              36286,
+              36286,
+              36286
+            ],
+            "peak_live_bytes": [
+              23906,
+              23906,
+              23906
+            ],
+            "live_bytes_at_return": [
+              407,
+              407,
+              407
+            ],
+            "returned_table_capacity_bytes": [
+              407,
+              407,
+              407
+            ]
+          }
+        },
+        {
+          "mode": "elias_fano_power_of_two",
+          "format_version": 3,
+          "file_bytes": 407,
+          "decoded_bytes": 2336,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 311,
+          "raw_rows": 0,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 0,
+          "ef_power_of_two_rows": 64,
+          "groups": 2,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 464,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 256,
+          "prepared_hint_bytes": 256,
+          "checked_scratch_capacity_bytes": 57,
+          "prepared_scratch_required_bytes": 57,
+          "local_trace_checksum_hex": "5367d64429fbbe02",
+          "local_trace_output_bytes": 7289340,
+          "setup": {
+            "build": {
+              "median_ns": 19890.0,
+              "elapsed_ns": [
+                20592,
+                18350,
+                19890
+              ]
+            },
+            "structural_open": {
+              "median_ns": 1602.0,
+              "elapsed_ns": [
+                1320,
+                1582,
+                1844,
+                1533,
+                1722,
+                1701,
+                1602
+              ]
+            },
+            "normal_open": {
+              "median_ns": 1905.0,
+              "elapsed_ns": [
+                1755,
+                1909,
+                1724,
+                2001,
+                1905,
+                2122,
+                1800
+              ]
+            },
+            "full_validation": {
+              "median_ns": 18600.0,
+              "elapsed_ns": [
+                18600,
+                17535,
+                21926,
+                18499,
+                18819,
+                18189,
+                18829
+              ]
+            },
+            "prepare": {
+              "median_ns": 12802.0,
+              "elapsed_ns": [
+                12621,
+                12354,
+                12926,
+                12832,
+                12802,
+                12997,
+                12755
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 93.6,
+              "elapsed_ns": [
+                18857790,
+                18471481,
+                18714674,
+                18720064,
+                18728299,
+                18536913,
+                18729599
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 93.736,
+              "elapsed_ns": [
+                18827273,
+                18601431,
+                18490266,
+                18808803,
+                19314076,
+                18652658,
+                18747127
+              ]
+            }
+          },
+          "file_sha256": "8dd4a769b9c27efdafbb6ebde6588bf289729275ecb75dadcac6274807e008aa",
+          "build_allocations": {
+            "allocation_calls": [
+              185,
+              185,
+              185
+            ],
+            "requested_bytes": [
+              36286,
+              36286,
+              36286
+            ],
+            "peak_live_bytes": [
+              23906,
+              23906,
+              23906
+            ],
+            "live_bytes_at_return": [
+              407,
+              407,
+              407
+            ],
+            "returned_table_capacity_bytes": [
+              407,
+              407,
+              407
+            ]
+          }
+        },
+        {
+          "mode": "compact",
+          "format_version": 3,
+          "file_bytes": 407,
+          "decoded_bytes": 2336,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 311,
+          "raw_rows": 0,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 64,
+          "ef_power_of_two_rows": 0,
+          "groups": 2,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 464,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 256,
+          "prepared_hint_bytes": 256,
+          "checked_scratch_capacity_bytes": 57,
+          "prepared_scratch_required_bytes": 57,
+          "local_trace_checksum_hex": "5367d64429fbbe02",
+          "local_trace_output_bytes": 7289340,
+          "setup": {
+            "build": {
+              "median_ns": 1509338.0,
+              "elapsed_ns": [
+                1509338,
+                1509295,
+                1512967
+              ]
+            },
+            "structural_open": {
+              "median_ns": 1581.0,
+              "elapsed_ns": [
+                1581,
+                1522,
+                1574,
+                696,
+                2777,
+                2363,
+                2978
+              ]
+            },
+            "normal_open": {
+              "median_ns": 1765.0,
+              "elapsed_ns": [
+                2059,
+                1703,
+                1765,
+                1711,
+                1807,
+                1596,
+                1880
+              ]
+            },
+            "full_validation": {
+              "median_ns": 20221.0,
+              "elapsed_ns": [
+                20221,
+                20037,
+                21253,
+                15620,
+                23650,
+                20193,
+                20975
+              ]
+            },
+            "prepare": {
+              "median_ns": 15437.0,
+              "elapsed_ns": [
+                15458,
+                15437,
+                15285,
+                14812,
+                16563,
+                15196,
+                15532
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 119.485,
+              "elapsed_ns": [
+                24101129,
+                23834920,
+                23560619,
+                24065578,
+                24489821,
+                23896930,
+                23811802
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 120.103,
+              "elapsed_ns": [
+                24020594,
+                23894932,
+                23358538,
+                23909944,
+                24171667,
+                24065682,
+                24094664
+              ]
+            }
+          },
+          "file_sha256": "e2d14f7fe026f2f19a98cc62be8086cdf289b0fff458c54d9dbf15e29df2d73a",
+          "build_allocations": {
+            "allocation_calls": [
+              656,
+              656,
+              656
+            ],
+            "requested_bytes": [
+              605346,
+              605346,
+              605346
+            ],
+            "peak_live_bytes": [
+              541346,
+              541346,
+              541346
+            ],
+            "live_bytes_at_return": [
+              407,
+              407,
+              407
+            ],
+            "returned_table_capacity_bytes": [
+              407,
+              407,
+              407
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "large_urls_and_ids",
+      "rows": 160000,
+      "matched_trace_checksum_hex": "172b7ba0e0a609a0",
+      "matched_trace_output_bytes": 7307380,
+      "loaded_vector": {
+        "inline_bytes": 24,
+        "retained_heap_bytes": 12960000,
+        "scratch_bytes": 57,
+        "matched_retrieval": {
+          "median_ns_per_value": 67.88,
+          "elapsed_ns": [
+            13061525,
+            13293719,
+            14256739,
+            13576030,
+            17857410,
+            16290571,
+            13188541
+          ]
+        }
+      },
+      "modes": [
+        {
+          "mode": "raw",
+          "format_version": 2,
+          "file_bytes": 5840096,
+          "decoded_bytes": 5840000,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 0,
+          "raw_rows": 160000,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 0,
+          "ef_power_of_two_rows": 0,
+          "groups": 2,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 80,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 2500,
+          "prepared_hint_bytes": 2500,
+          "checked_scratch_capacity_bytes": 57,
+          "prepared_scratch_required_bytes": 57,
+          "local_trace_checksum_hex": "d33a97e18d4d272b",
+          "local_trace_output_bytes": 7289340,
+          "setup": {
+            "build": {
+              "median_ns": 23463103.0,
+              "elapsed_ns": [
+                36328388,
+                23208344,
+                23463103
+              ]
+            },
+            "structural_open": {
+              "median_ns": 968.0,
+              "elapsed_ns": [
+                683,
+                1123,
+                968,
+                2037,
+                774,
+                1355,
+                789
+              ]
+            },
+            "normal_open": {
+              "median_ns": 9609998.0,
+              "elapsed_ns": [
+                9525860,
+                9677372,
+                9609998,
+                9491576,
+                9795045,
+                9851028,
+                9430710
+              ]
+            },
+            "full_validation": {
+              "median_ns": 33369582.0,
+              "elapsed_ns": [
+                33109272,
+                33887023,
+                33347656,
+                33369582,
+                33491377,
+                33972790,
+                32989738
+              ]
+            },
+            "prepare": {
+              "median_ns": 32938393.0,
+              "elapsed_ns": [
+                32740924,
+                34027146,
+                33810035,
+                32938393,
+                32702478,
+                34097785,
+                32882801
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 49.281,
+              "elapsed_ns": [
+                8322695,
+                10150596,
+                10552270,
+                8757409,
+                9856108,
+                11725312,
+                8697575
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 41.791,
+              "elapsed_ns": [
+                9441701,
+                8150598,
+                10650652,
+                8290242,
+                8358269,
+                9138711,
+                8158031
+              ]
+            }
+          },
+          "file_sha256": "9c60a72f67958efc113f178fcfad21ce8730915ae4fc4efa0579cb92c876eb83",
+          "build_allocations": {
+            "allocation_calls": [
+              160053,
+              160053,
+              160053
+            ],
+            "requested_bytes": [
+              36846728,
+              36846728,
+              36846728
+            ],
+            "peak_live_bytes": [
+              24263552,
+              24263552,
+              24263552
+            ],
+            "live_bytes_at_return": [
+              5840096,
+              5840096,
+              5840096
+            ],
+            "returned_table_capacity_bytes": [
+              5840096,
+              5840096,
+              5840096
+            ]
+          }
+        },
+        {
+          "mode": "phrase",
+          "format_version": 2,
+          "file_bytes": 1218214,
+          "decoded_bytes": 5840000,
+          "dictionary_bytes": 811,
+          "elias_fano_bytes": 0,
+          "raw_rows": 0,
+          "phrase_rows": 160000,
+          "ef_mixed_rows": 0,
+          "ef_power_of_two_rows": 0,
+          "groups": 6,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 3568,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 4804,
+          "prepared_hint_bytes": 2500,
+          "checked_scratch_capacity_bytes": 57,
+          "prepared_scratch_required_bytes": 64,
+          "local_trace_checksum_hex": "ebb228682feddbf0",
+          "local_trace_output_bytes": 7289340,
+          "setup": {
+            "build": {
+              "median_ns": 548292522.0,
+              "elapsed_ns": [
+                540840105,
+                548292522,
+                549659415
+              ]
+            },
+            "structural_open": {
+              "median_ns": 30418.0,
+              "elapsed_ns": [
+                25810,
+                25211,
+                31356,
+                30418,
+                30527,
+                31583,
+                30414
+              ]
+            },
+            "normal_open": {
+              "median_ns": 2039811.0,
+              "elapsed_ns": [
+                2051638,
+                2029079,
+                2072223,
+                2096168,
+                2023048,
+                2039811,
+                2015422
+              ]
+            },
+            "full_validation": {
+              "median_ns": 29649947.0,
+              "elapsed_ns": [
+                30580798,
+                29102312,
+                29610477,
+                29649947,
+                29353282,
+                30041460,
+                29767962
+              ]
+            },
+            "prepare": {
+              "median_ns": 29484047.0,
+              "elapsed_ns": [
+                28849610,
+                30181844,
+                29484047,
+                29324683,
+                28968089,
+                29903960,
+                29838355
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 44.883,
+              "elapsed_ns": [
+                8794271,
+                9083660,
+                8976511,
+                9042636,
+                8961676,
+                9085840,
+                8940640
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 44.833,
+              "elapsed_ns": [
+                8966602,
+                9171241,
+                8742490,
+                9005721,
+                8726051,
+                9060965,
+                8921602
+              ]
+            }
+          },
+          "file_sha256": "da3b6965544d85d939b0324a87645b272be840f94ae8e6fb76e0381b0b75543c",
+          "build_allocations": {
+            "allocation_calls": [
+              805938,
+              805938,
+              805938
+            ],
+            "requested_bytes": [
+              92326230,
+              92326230,
+              92326230
+            ],
+            "peak_live_bytes": [
+              27362005,
+              27362005,
+              27362005
+            ],
+            "live_bytes_at_return": [
+              1218214,
+              1218214,
+              1218214
+            ],
+            "returned_table_capacity_bytes": [
+              1218214,
+              1218214,
+              1218214
+            ]
+          }
+        },
+        {
+          "mode": "elias_fano_mixed",
+          "format_version": 3,
+          "file_bytes": 50471,
+          "decoded_bytes": 5840000,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 50375,
+          "raw_rows": 0,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 160000,
+          "ef_power_of_two_rows": 0,
+          "groups": 2,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 464,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 2500,
+          "prepared_hint_bytes": 2500,
+          "checked_scratch_capacity_bytes": 57,
+          "prepared_scratch_required_bytes": 57,
+          "local_trace_checksum_hex": "d33a97e18d4d272b",
+          "local_trace_output_bytes": 7289340,
+          "setup": {
+            "build": {
+              "median_ns": 36730365.0,
+              "elapsed_ns": [
+                36730365,
+                51317612,
+                34985136
+              ]
+            },
+            "structural_open": {
+              "median_ns": 293287.0,
+              "elapsed_ns": [
+                301053,
+                293287,
+                267457,
+                298741,
+                269115,
+                269433,
+                296963
+              ]
+            },
+            "normal_open": {
+              "median_ns": 374739.0,
+              "elapsed_ns": [
+                353353,
+                356342,
+                387843,
+                374739,
+                384143,
+                419179,
+                353341
+              ]
+            },
+            "full_validation": {
+              "median_ns": 41190402.0,
+              "elapsed_ns": [
+                41462530,
+                41130471,
+                40629592,
+                41835066,
+                40452206,
+                42139332,
+                41190402
+              ]
+            },
+            "prepare": {
+              "median_ns": 40634782.0,
+              "elapsed_ns": [
+                40316300,
+                39228266,
+                40634782,
+                41438055,
+                40453398,
+                41841624,
+                40668282
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 124.496,
+              "elapsed_ns": [
+                24650565,
+                24182634,
+                25153946,
+                25082057,
+                24581768,
+                25082145,
+                24899196
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 124.765,
+              "elapsed_ns": [
+                24943403,
+                24952904,
+                25463078,
+                25142328,
+                24833102,
+                25051921,
+                24732120
+              ]
+            }
+          },
+          "file_sha256": "fc231fb062c5c4eca4107f5ce0fa2e921df70a6721fc79a6a11d47f1053c7a51",
+          "build_allocations": {
+            "allocation_calls": [
+              160188,
+              160188,
+              160188
+            ],
+            "requested_bytes": [
+              46687670,
+              46687670,
+              46687670
+            ],
+            "peak_live_bytes": [
+              24263552,
+              24263552,
+              24263552
+            ],
+            "live_bytes_at_return": [
+              50471,
+              50471,
+              50471
+            ],
+            "returned_table_capacity_bytes": [
+              50471,
+              50471,
+              50471
+            ]
+          }
+        },
+        {
+          "mode": "elias_fano_power_of_two",
+          "format_version": 3,
+          "file_bytes": 50471,
+          "decoded_bytes": 5840000,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 50375,
+          "raw_rows": 0,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 0,
+          "ef_power_of_two_rows": 160000,
+          "groups": 2,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 464,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 2500,
+          "prepared_hint_bytes": 2500,
+          "checked_scratch_capacity_bytes": 57,
+          "prepared_scratch_required_bytes": 57,
+          "local_trace_checksum_hex": "d33a97e18d4d272b",
+          "local_trace_output_bytes": 7289340,
+          "setup": {
+            "build": {
+              "median_ns": 37225681.0,
+              "elapsed_ns": [
+                37225681,
+                43871861,
+                35385421
+              ]
+            },
+            "structural_open": {
+              "median_ns": 273410.0,
+              "elapsed_ns": [
+                273410,
+                274021,
+                274360,
+                295265,
+                270396,
+                273381,
+                263885
+              ]
+            },
+            "normal_open": {
+              "median_ns": 378241.0,
+              "elapsed_ns": [
+                378241,
+                391725,
+                357259,
+                353520,
+                370243,
+                392781,
+                380132
+              ]
+            },
+            "full_validation": {
+              "median_ns": 36382817.0,
+              "elapsed_ns": [
+                36182390,
+                36382817,
+                36562393,
+                36396262,
+                35319450,
+                36654569,
+                35151694
+              ]
+            },
+            "prepare": {
+              "median_ns": 35991185.0,
+              "elapsed_ns": [
+                35870324,
+                35991185,
+                35750303,
+                36620210,
+                36274777,
+                36681721,
+                35730303
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 98.808,
+              "elapsed_ns": [
+                19014811,
+                19745546,
+                19785692,
+                19840372,
+                19761616,
+                19769107,
+                19432087
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 99.571,
+              "elapsed_ns": [
+                19603370,
+                19917487,
+                19960741,
+                19897593,
+                19960690,
+                19914151,
+                19505195
+              ]
+            }
+          },
+          "file_sha256": "486ad5316f40c86e4a2134d7a0c04e26831896f87584ed04e71a3c8c7c075a0e",
+          "build_allocations": {
+            "allocation_calls": [
+              160188,
+              160188,
+              160188
+            ],
+            "requested_bytes": [
+              46687670,
+              46687670,
+              46687670
+            ],
+            "peak_live_bytes": [
+              24263552,
+              24263552,
+              24263552
+            ],
+            "live_bytes_at_return": [
+              50471,
+              50471,
+              50471
+            ],
+            "returned_table_capacity_bytes": [
+              50471,
+              50471,
+              50471
+            ]
+          }
+        },
+        {
+          "mode": "compact",
+          "format_version": 3,
+          "file_bytes": 50471,
+          "decoded_bytes": 5840000,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 50375,
+          "raw_rows": 0,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 160000,
+          "ef_power_of_two_rows": 0,
+          "groups": 2,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 464,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 2500,
+          "prepared_hint_bytes": 2500,
+          "checked_scratch_capacity_bytes": 57,
+          "prepared_scratch_required_bytes": 57,
+          "local_trace_checksum_hex": "d33a97e18d4d272b",
+          "local_trace_output_bytes": 7289340,
+          "setup": {
+            "build": {
+              "median_ns": 584768373.0,
+              "elapsed_ns": [
+                589840437,
+                581806872,
+                584768373
+              ]
+            },
+            "structural_open": {
+              "median_ns": 273872.0,
+              "elapsed_ns": [
+                288496,
+                287724,
+                273932,
+                273872,
+                273665,
+                273639,
+                267569
+              ]
+            },
+            "normal_open": {
+              "median_ns": 385051.0,
+              "elapsed_ns": [
+                355782,
+                381907,
+                401379,
+                368754,
+                397100,
+                390810,
+                385051
+              ]
+            },
+            "full_validation": {
+              "median_ns": 41647842.0,
+              "elapsed_ns": [
+                41647842,
+                41356020,
+                41685632,
+                41570296,
+                41929986,
+                42945213,
+                40247008
+              ]
+            },
+            "prepare": {
+              "median_ns": 41563552.0,
+              "elapsed_ns": [
+                41563552,
+                41958900,
+                41000770,
+                41625867,
+                41851026,
+                41080873,
+                40300699
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 125.108,
+              "elapsed_ns": [
+                24649166,
+                25184904,
+                24326013,
+                25106410,
+                25181276,
+                25021549,
+                24567957
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 126.601,
+              "elapsed_ns": [
+                25102288,
+                25320200,
+                25326796,
+                25330639,
+                25372935,
+                25152167,
+                24829172
+              ]
+            }
+          },
+          "file_sha256": "fc231fb062c5c4eca4107f5ce0fa2e921df70a6721fc79a6a11d47f1053c7a51",
+          "build_allocations": {
+            "allocation_calls": [
+              806175,
+              806175,
+              806175
+            ],
+            "requested_bytes": [
+              103619266,
+              103619266,
+              103619266
+            ],
+            "peak_live_bytes": [
+              27362005,
+              27362005,
+              27362005
+            ],
+            "live_bytes_at_return": [
+              50471,
+              50471,
+              50471
+            ],
+            "returned_table_capacity_bytes": [
+              50471,
+              50471,
+              50471
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "build_allocation_method": {
+    "separate_process": true,
+    "scope": "single-thread Rust allocator calls during pkbyte::build over resident source strings, excluding release of the returned table",
+    "requested_bytes": "cumulative requested allocation sizes, including the new size of each reallocation and any failed requests",
+    "peak_live_bytes": "maximum sum of requested sizes of successful scoped allocations still live at an allocator boundary",
+    "reallocation": "success replaces the old size with the new size; failure keeps the old size; allocator-internal overlap is outside scope",
+    "excludes": [
+      "pre-existing heap",
+      "allocator overhead",
+      "stack",
+      "RSS",
+      "allocations outside Rust's global allocator"
+    ],
+    "live_bytes_at_return": "checked against the returned table buffer capacity"
+  },
+  "environment": {
+    "run_started_utc": "2026-11-25T13:03:43+00:00",
+    "platform": "Linux-7.0.13-200.fc44.x86_64-x86_64-with-glibc2.43",
+    "cpu_architecture": "x86_64",
+    "cpu_model": "12th Gen Intel(R) Core(TM) i9-12900K",
+    "logical_cpus": 24,
+    "available_logical_cpus": 24,
+    "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)\nbinary: rustc\ncommit-hash: 0ef1bc386059596dada8fb65b50425aab2ea637a\ncommit-date: 2026-11-09\nhost: x86_64-unknown-linux-gnu\nrelease: 1.100.0\nLLVM version: 23.1.5",
+    "cargo": "cargo 1.100.0 (3acc79c0c 2026-11-05)",
+    "library_build": "Cargo release profile",
+    "harness_build": "rustc -O -C lto=thin -C codegen-units=1"
+  },
+  "reproduction": {
+    "rustup_toolchain": "1.100.0",
+    "command": [
+      "python3",
+      "benchmarks/run_codecs.py",
+      "--iterations",
+      "200000",
+      "--rounds",
+      "7",
+      "--build-rounds",
+      "3",
+      "--extended-workloads"
+    ],
+    "input_sha256": {
+      "Cargo.toml": "f90fa4d27f1139e1f7a53aecf1b3b55954e08dfc2c269443e7f40b00af97ecbf",
+      "Cargo.lock": "5a8edc83fe739da4a05af8f464a3afda6f3ad065c5ef980d008a3b51ae0fa582",
+      "benchmarks/allocations.rs": "4673b30d9066124d8cfc22d45f3c7981d9c67b1180c2ef62f471b29b5fa9f314",
+      "benchmarks/build_memory.rs": "2ec43bfe9f5308010531b6e41479da434fc0f21bcd8279ab7499b5af1cd4741c",
+      "benchmarks/codec_workloads.rs": "f49b9f9ccfe2190c3adc45f8c476315b55d3553de70b072618818c39670f6c40",
+      "benchmarks/codecs.rs": "eb95ac7a3164c57ef33299e888823c87def2ca6510c9d9f9597b80e3aa310e36",
+      "benchmarks/run_codecs.py": "f7552c03c15640028f1c61faee47d3a9ed3625889721f3e7be40a304f2b5e5fa",
+      "benchmarks/run_prepared.py": "61e18ad0c03564eb76970380cba1b79c41739f47cfb9d988af7b1d88b4c85f84",
+      "data/ssa_2024_given_names.txt": "a9c432e163d94e066fc068020f249b333f4ff1703298ecacc13e579bcbeff396",
+      "src/bin/pkbyte/jsonl.rs": "54e927e94fd0e278f2726af0822e36185e422b9f6d261840a82d593d019fcef2",
+      "src/bin/pkbyte.rs": "c52ef952b2e50b9fc682107b1457498159824c682e8bdbaf583181487ef8cf65",
+      "src/build_support.rs": "b3f0c20e89016291bfd21b72aafef8b785fdbf56d085cf1450b868536bcb3318",
+      "src/builder.rs": "cc4db2582ce61f37d8adb1ffe01268cbd6d82c29160cd56f833f0efbfa38c44b",
+      "src/ef.rs": "9ef7766f3656ba2a7b3faedce3ad773e2142722ce877c1db025ff8760032e57f",
+      "src/error.rs": "baf1e0e9902b575a845440c9fbab2b6d7d42f7ad269dd6745174240900ef7a96",
+      "src/format.rs": "3cfd994680ac6a3150b46f01c10e0df7a9a20ef92e06f69c84c52ef727b2801d",
+      "src/lib.rs": "c813a5fd7c49bab3ad8fff897b4147ef5d98f64583500e456362783a1241d058",
+      "src/reader/prepared.rs": "7848e67e74de061fdee4336969d79b31f732a586b2b92aa644790bf9619a5e7c",
+      "src/reader.rs": "1794307d90b1fb938187106b4f57aa4dbf69af749949321a47543c8ec4d0edcf",
+      "src/sampling.rs": "63c8c31c95a5bda0f49eaa2a94d6dbd29748702393a33a56ce3286ea4ffe6543",
+      "src/text.rs": "2dfe39a6772a5ae851df7493b9101efff649fbb61f64fa371980383cc4cb9212"
+    },
+    "release_rlib_sha256": "b0a674e70e165a3ceba3e1d4d4f25e824c630807bbd669d39fd885b2c66c7244",
+    "benchmark_executable_sha256": "3d173c4268e9eb0b1be4904189f93e8dfb149afff68fe577d09bf08581438ed8",
+    "build_allocation_executable_sha256": "61f38ce5d30d7e54c15e0c3fdabc8ee685f42de447f7dac2b700a4ac4e02e05b"
+  }
+}

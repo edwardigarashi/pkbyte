@@ -1,0 +1,178 @@
+{
+  "table": {
+    "version": 3,
+    "values": 29329,
+    "decoded_bytes": 178667,
+    "portable_bytes": 70868,
+    "payload_bytes": 70580,
+    "container_overhead_bytes": 288,
+    "dictionary_bytes": 0,
+    "groups": 14,
+    "raw_rows": 56,
+    "phrase_rows": 0,
+    "ef_mixed_rows": 29273,
+    "ef_power_of_two_rows": 0,
+    "ef_block_bytes": 70357
+  },
+  "retained": {
+    "checked_metadata_heap_bytes": 2096,
+    "prepared_additional_heap_bytes": 3668,
+    "prepared_hint_bytes": 3668,
+    "scratch_initialized_bytes": 15,
+    "scratch_heap_capacity_bytes": 15
+  },
+  "configuration": {
+    "rounds": 9,
+    "iterations_per_batch": 500000,
+    "unreported_warmup_batches": 1,
+    "seed_hex": "5a17e6d9b0432c81",
+    "rng": "SplitMix64",
+    "rank_reduction": "multiply high",
+    "max_hint_bytes": 4096
+  },
+  "startup": {
+    "open_structural": {
+      "median_ns": 92304.0,
+      "elapsed_ns": [
+        302255,
+        94802,
+        92806,
+        89947,
+        91967,
+        91627,
+        91949,
+        92304,
+        94064
+      ],
+      "allocation_calls": 4,
+      "allocation_requested_bytes": 3248
+    },
+    "prepare_with_crc_and_uniqueness": {
+      "median_ns": 5193781.0,
+      "elapsed_ns": [
+        9439998,
+        5243483,
+        5107982,
+        5129141,
+        5227444,
+        5122277,
+        5205836,
+        5158528,
+        5193781
+      ],
+      "allocation_calls": 33286,
+      "allocation_requested_bytes": 1333366
+    },
+    "initialize_scratch": {
+      "median_ns": 49.0,
+      "elapsed_ns": [
+        72,
+        41,
+        37,
+        26,
+        109,
+        63,
+        29,
+        111,
+        49
+      ],
+      "allocation_calls": 1,
+      "allocation_requested_bytes": 15
+    },
+    "total": {
+      "median_ns": 5287894.0,
+      "elapsed_ns": [
+        9742325,
+        5338326,
+        5200825,
+        5219114,
+        5319520,
+        5213967,
+        5297814,
+        5250943,
+        5287894
+      ]
+    }
+  },
+  "warm_prepared_sampling": {
+    "median_ns_per_sample": 53.798,
+    "elapsed_ns": [
+      26560286,
+      26879700,
+      26991562,
+      26217326,
+      26899202,
+      27006389,
+      27137219,
+      28696187,
+      26546221
+    ],
+    "checksum_hex": "eb80fd5ea38e50b5",
+    "allocation_calls": 0,
+    "allocation_requested_bytes": 0
+  },
+  "dataset": {
+    "path": "data/ssa_2024_given_names.txt",
+    "sha256": "a9c432e163d94e066fc068020f249b333f4ff1703298ecacc13e579bcbeff396",
+    "format": "lines"
+  },
+  "embedding": {
+    "source_wrapper_bytes": 95,
+    "serialized_prepared_metadata_bytes": 0,
+    "benchmark_executable_bytes": 2231392,
+    "exact_portable_table_occurrences_in_executable": 1,
+    "generated_files": [
+      "pkbyte_table.npk",
+      "pkbyte_table.rs"
+    ]
+  },
+  "environment": {
+    "run_started_utc": "2026-11-25T12:45:46+00:00",
+    "platform": "Linux-7.0.13-200.fc44.x86_64-x86_64-with-glibc2.43",
+    "cpu_architecture": "x86_64",
+    "cpu_model": "12th Gen Intel(R) Core(TM) i9-12900K",
+    "logical_cpus": 24,
+    "available_logical_cpus": 24,
+    "rustc": "rustc 1.91.1 (ed61e7d7e 2025-11-07)\nbinary: rustc\ncommit-hash: ed61e7d7e242494fb7057f2657300d9e77bb4fcb\ncommit-date: 2025-11-07\nhost: x86_64-unknown-linux-gnu\nrelease: 1.91.1\nLLVM version: 21.1.2",
+    "cargo": "cargo 1.91.1 (ea2d97820 2025-10-10)",
+    "library_build": "Cargo release profile (thin LTO, one code-generation unit)",
+    "generator_and_harness_build": "rustc -O -C lto=thin -C codegen-units=1, no stripping option"
+  },
+  "reproduction": {
+    "command": [
+      "python3",
+      "benchmarks/run_embedding.py",
+      "--iterations",
+      "500000",
+      "--rounds",
+      "9"
+    ],
+    "source_sha256": {
+      "Cargo.toml": "f90fa4d27f1139e1f7a53aecf1b3b55954e08dfc2c269443e7f40b00af97ecbf",
+      "Cargo.lock": "5a8edc83fe739da4a05af8f464a3afda6f3ad065c5ef980d008a3b51ae0fa582",
+      "benchmarks/embedding.rs": "d0a3ceece435aa72c43a02eec39a825f9283b7a2a989c995b316b7f9e3aa584b",
+      "benchmarks/embedding_generate.rs": "61b120fed529cda0425a9b0fc8de0acbb649774b4c72fb221c4799619f05c132",
+      "benchmarks/run_embedding.py": "47359ca537103fcc1cb11ad08bddeace966907117b22cddeaa8f1d9a49681cd6",
+      "data/ssa_2024_given_names.txt": "a9c432e163d94e066fc068020f249b333f4ff1703298ecacc13e579bcbeff396",
+      "src/bin/pkbyte/jsonl.rs": "54e927e94fd0e278f2726af0822e36185e422b9f6d261840a82d593d019fcef2",
+      "src/bin/pkbyte.rs": "c52ef952b2e50b9fc682107b1457498159824c682e8bdbaf583181487ef8cf65",
+      "src/build_support.rs": "487226873cbacee1f1904fb68c0441438617d46bec19b904c18a25e34bb725b1",
+      "src/builder.rs": "cc4db2582ce61f37d8adb1ffe01268cbd6d82c29160cd56f833f0efbfa38c44b",
+      "src/ef.rs": "9ef7766f3656ba2a7b3faedce3ad773e2142722ce877c1db025ff8760032e57f",
+      "src/error.rs": "baf1e0e9902b575a845440c9fbab2b6d7d42f7ad269dd6745174240900ef7a96",
+      "src/format.rs": "3cfd994680ac6a3150b46f01c10e0df7a9a20ef92e06f69c84c52ef727b2801d",
+      "src/lib.rs": "c813a5fd7c49bab3ad8fff897b4147ef5d98f64583500e456362783a1241d058",
+      "src/reader/prepared.rs": "7848e67e74de061fdee4336969d79b31f732a586b2b92aa644790bf9619a5e7c",
+      "src/reader.rs": "1794307d90b1fb938187106b4f57aa4dbf69af749949321a47543c8ec4d0edcf",
+      "src/sampling.rs": "63c8c31c95a5bda0f49eaa2a94d6dbd29748702393a33a56ce3286ea4ffe6543",
+      "src/text.rs": "2dfe39a6772a5ae851df7493b9101efff649fbb61f64fa371980383cc4cb9212"
+    },
+    "artifact_sha256": {
+      "release_rlib": "358179ddd411512cc963081f76e0a901a91fa924a50f707ab1de6fcdaed0b54e",
+      "generator_executable": "3d6f7ef4d5d48cc4253491b3f21072cfa3d78b6fb6bed33fc2d213238d7c1b5b",
+      "benchmark_executable": "bc70998cf33bfa8443dda7b6de6026bf4824727bbee0dd0b1d4873876d8f7c84",
+      "portable_table": "adf902a86dcd4cbc35ef20827bf3a9ec4e84a8a5db86c5a208bc9fbf40c5a5fc",
+      "source_wrapper": "d4443e333576dbace48f39c1ca03a373cb2ca86334e07e42c829defd68eb393a"
+    }
+  }
+}

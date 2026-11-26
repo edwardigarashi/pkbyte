@@ -1,0 +1,327 @@
+{
+  "schema_version": 2,
+  "dataset": {
+    "path": "/workspace/scratch/ca4f59e01423/namepack/data/ssa_2024_given_names.txt",
+    "unique_names": 29329,
+    "maximum_utf8_bytes": 15,
+    "sha256": "a9c432e163d94e066fc068020f249b333f4ff1703298ecacc13e579bcbeff396"
+  },
+  "environment": {
+    "os": "linux",
+    "arch": "x86_64",
+    "sqlite_version": "3.46.1",
+    "json_c_version": "0.18",
+    "zlib_version": "1.3.1",
+    "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+    "kernel": "6.18.57",
+    "logical_cpus": 9,
+    "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+    "system_libraries": {
+      "sqlite3": "libsqlite3.so.0",
+      "json-c": "libjson-c.so.5",
+      "z": "libz.so.1"
+    },
+    "profile": "release library; rustc -O harness; no target-cpu=native"
+  },
+  "methodology": {
+    "iterations_per_batch": 100000,
+    "timed_batches": 9,
+    "startup_rounds": 9,
+    "unreported_warmup_batches": 1,
+    "rng_timed": {
+      "warm_retrieval": false,
+      "warm_sampling": true
+    },
+    "sampling_rng": "SplitMix64 (noncryptographic)",
+    "sampling_range_reduction": "namepack::uniform_below",
+    "rng_reseeded_before_each_batch": true,
+    "full_byte_checksum_timed": true,
+    "result_copy_timed": true,
+    "warm_buffers_preallocated": true,
+    "startup_output_buffer_preallocated": true,
+    "os_page_cache": "warm",
+    "startup_excludes_reader_teardown": true,
+    "rank_translations_precomputed": true,
+    "json_gzip_order": "lexical",
+    "sqlite_single_thread_nomutex": true,
+    "individual_request_percentiles": false,
+    "sampling_seed_hex": "6e616d657061636b",
+    "checksum_hex": "842a4e00e57f849e"
+  },
+  "sizes_bytes": {
+    "name_bytes_without_delimiters": 178667,
+    "input_text": 207996,
+    "compact_json": 266655,
+    "gzip_text_level_9": 72985,
+    "sqlite": 438272,
+    "namepack_raw": 178955,
+    "namepack_compact": 106230
+  },
+  "build_time_ns": {
+    "compact": 73362595,
+    "raw": 2644130
+  },
+  "warm_retrieval_ns_per_lookup": {
+    "compact": {
+      "median": 59.984,
+      "min": 58.192,
+      "max": 84.61,
+      "batch_elapsed_ns": [
+        8460976,
+        5998416,
+        6112626,
+        5831588,
+        5819170,
+        6536616,
+        5987740,
+        5832129,
+        7192762
+      ]
+    },
+    "loaded_vector": {
+      "median": 34.903,
+      "min": 28.559,
+      "max": 58.154,
+      "batch_elapsed_ns": [
+        4459398,
+        5456110,
+        3008001,
+        2855895,
+        5355710,
+        3432512,
+        5815354,
+        3490288,
+        2872549
+      ]
+    },
+    "raw": {
+      "median": 37.73,
+      "min": 35.75,
+      "max": 50.325,
+      "batch_elapsed_ns": [
+        5032460,
+        3732038,
+        3682393,
+        3993506,
+        4036800,
+        3575004,
+        4156027,
+        3773028,
+        3747821
+      ]
+    },
+    "sqlite_prepared_autocommit": {
+      "median": 2773.021,
+      "min": 2736.164,
+      "max": 2997.105,
+      "batch_elapsed_ns": [
+        281848632,
+        299710486,
+        281467130,
+        274990523,
+        273616425,
+        281550528,
+        275461183,
+        275381394,
+        277302059
+      ]
+    },
+    "sqlite_prepared_read_transaction": {
+      "median": 369.62,
+      "min": 352.846,
+      "max": 479.205,
+      "batch_elapsed_ns": [
+        43231244,
+        37618726,
+        36998905,
+        35941162,
+        35284636,
+        47920519,
+        35770519,
+        35516992,
+        36961980
+      ]
+    }
+  },
+  "warm_sampling_ns_per_name": {
+    "compact_sample_into": {
+      "median": 63.793,
+      "min": 61.856,
+      "max": 67.137,
+      "batch_elapsed_ns": [
+        6653561,
+        6219785,
+        6220797,
+        6678097,
+        6530247,
+        6268848,
+        6379253,
+        6713699,
+        6185624
+      ]
+    },
+    "loaded_vector": {
+      "median": 42.26,
+      "min": 33.521,
+      "max": 50.682,
+      "batch_elapsed_ns": [
+        3945905,
+        5068163,
+        3375207,
+        4226041,
+        4719936,
+        3352083,
+        4267142,
+        4680838,
+        3422367
+      ]
+    },
+    "sqlite_prepared_read_transaction": {
+      "median": 372.196,
+      "min": 351.498,
+      "max": 428.767,
+      "batch_elapsed_ns": [
+        36536419,
+        37219614,
+        35419829,
+        38583351,
+        42876704,
+        36584951,
+        41983005,
+        37229669,
+        35149767
+      ]
+    }
+  },
+  "startup_warm_cache_microseconds": {
+    "compact_crc_open": {
+      "median": 303.611,
+      "min": 299.105,
+      "max": 360.626,
+      "batch_elapsed_ns": [
+        300957,
+        330251,
+        360626,
+        303611,
+        299105,
+        344512,
+        300357,
+        331523,
+        299395
+      ]
+    },
+    "compact_structural_open": {
+      "median": 60.49,
+      "min": 57.044,
+      "max": 72.258,
+      "batch_elapsed_ns": [
+        72258,
+        61121,
+        64035,
+        58066,
+        57044,
+        60490,
+        70565,
+        59849,
+        57886
+      ]
+    },
+    "gzip_text_read_decode_parse_lookup": {
+      "median": 1994.024,
+      "min": 1832.274,
+      "max": 2178.488,
+      "batch_elapsed_ns": [
+        2036527,
+        2001875,
+        2178488,
+        1958941,
+        1832274,
+        2070328,
+        1994024,
+        1975957,
+        1921205
+      ]
+    },
+    "json_c_read_parse_lookup": {
+      "median": 2057.408,
+      "min": 1951.641,
+      "max": 2221.953,
+      "batch_elapsed_ns": [
+        1951641,
+        2221953,
+        1970539,
+        2169325,
+        2057408,
+        2192188,
+        2016237,
+        1996878,
+        2082276
+      ]
+    },
+    "raw_crc_open": {
+      "median": 435.137,
+      "min": 401.497,
+      "max": 524.13,
+      "batch_elapsed_ns": [
+        420004,
+        401497,
+        450910,
+        448797,
+        451882,
+        401797,
+        524130,
+        416689,
+        435137
+      ]
+    },
+    "sqlite_open_prepare_lookup": {
+      "median": 80.59,
+      "min": 75.222,
+      "max": 96.604,
+      "batch_elapsed_ns": [
+        96604,
+        79027,
+        87740,
+        92037,
+        75222,
+        75232,
+        84356,
+        80590,
+        78316
+      ]
+    }
+  },
+  "reproduction": {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "/workspace/scratch/ca4f59e01423/namepack/benchmarks/run.py",
+      "--input",
+      "/workspace/scratch/ca4f59e01423/namepack/data/ssa_2024_given_names.txt",
+      "--output-dir",
+      "/workspace/scratch/ca4f59e01423/namepack/benchmarks/out/ssa2024",
+      "--iterations",
+      "100000",
+      "--rounds",
+      "9",
+      "--startup-rounds",
+      "9"
+    ],
+    "harness_sha256": "21eaee17aa3847ff7bf7e766a06546d8e2640b9a9161f7c4c0afe7cca7689eef",
+    "runner_sha256": "4fbe0143ba71a8d6564138ed21bd341e2587e33b1792b565451cbd216da8bdc5",
+    "core_source_files_sha256": {
+      "Cargo.toml": "bd3243a0312e4ba84fdcf3ac82a6b255467b58503881fb7ea1ca94f9e84ffbc1",
+      "Cargo.lock": "8b71af35e423660349c800c64b78098bf3781cbb81f4a7627d3884d86c21196f",
+      "src/bin/namepack.rs": "7397c55dee5c62e60d5d6d58ea73ccdbfde4710d5d2e4c8813feada0e3fb2a31",
+      "src/builder.rs": "bb8abd59f1faa4a47722abc148515d313d3eb3391c88f32f75dc9af329a55a56",
+      "src/error.rs": "91c288b7e1aadd9b6ad23c3881a095c1fd5f997566948b6f6c2ea6ca1612c3f4",
+      "src/format.rs": "69f24e3eb396cb9622d19333bd2d85c6add56e7f6d2d916a6136080dde7cd051",
+      "src/lib.rs": "e8458f1d1d7bc0cceacb35fa35500b72d491e020cbeeaba132570980bbf21b8a",
+      "src/reader.rs": "23edb4c7be455ff91f3446044b7140a3338d8adc8a8bb365b4a8a31e5f245dba",
+      "src/sampling.rs": "fb58d6b7a1c719793dfee7740722dfcbe8487f301f696502ebf07c752033f5dc"
+    },
+    "core_source_manifest_sha256": "5fdf8cfe03f45b00f6942f488eae282af3628df246df98488a093f055c6a3b5f",
+    "core_source_manifest_hash_format": "SHA-256 of UTF-8 JSON mapping relative paths to content SHA-256 hashes; sorted keys; separators comma and colon; no trailing newline.",
+    "release_rlib_sha256": "21b3c84e89b9fba5b3cce8d52b3e15cd59b9b7d077d9d0b7ee0f3bee5bfcea0f",
+    "benchmark_executable_sha256": "bee724efa129e69bb27d23e3c92ac337b848bbe3419d5d2d781d2db44590baf2"
+  }
+}

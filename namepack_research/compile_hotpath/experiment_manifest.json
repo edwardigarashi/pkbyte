@@ -1,0 +1,115 @@
+{
+  "environment": {
+    "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)\nbinary: rustc\ncommit-hash: 0ef1bc386059596dada8fb65b50425aab2ea637a\ncommit-date: 2026-11-09\nhost: x86_64-unknown-linux-gnu\nrelease: 1.100.0\nLLVM version: 23.1.5\n",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "machine": "x86_64"
+  },
+  "files": {
+    "namepack_research/compile_hotpath/Cargo.toml": {
+      "bytes": 203,
+      "sha256": "822dc81fccfff84834bf9022b9985fe1fdf0daa61c66baaea626a8c3d5c99a5d"
+    },
+    "namepack_research/compile_hotpath/Cargo.lock": {
+      "bytes": 252,
+      "sha256": "5b65282c3179529bc51d2082472e048f5439d7c3e5c4f49b345c7cd3e5ed77b0"
+    },
+    "namepack_research/compile_hotpath/src/main.rs": {
+      "bytes": 7758,
+      "sha256": "6df181d932d43f3d47d28c8d24ae22134b11e4dd354196ab41148b2962b1b008"
+    },
+    "namepack_research/compile_hotpath/src/ef.rs": {
+      "bytes": 6032,
+      "sha256": "8e3050d2413182dac1fd19d72560a5e2b4762dee60d4514c2ae4c71668b70af7"
+    },
+    "namepack_research/compile_hotpath/src/ef_main.rs": {
+      "bytes": 7308,
+      "sha256": "8b2176d730faead35f86606028fec84a0a1eb358fdc0707672f8bd909ba86554"
+    },
+    "namepack_research/compile_hotpath/run_ef.py": {
+      "bytes": 672,
+      "sha256": "3b228fa47ce18d66fe771c7ad8460d11e2a41bf2526537c48f4fa35248606d22"
+    },
+    "namepack_research/compile_hotpath/results.json": {
+      "bytes": 1373,
+      "sha256": "91f9103d4aa18b788f6a0b03cb9151618dfad7c95d09503fa21ad5fe741fcf4c"
+    },
+    "namepack_research/compile_hotpath/ef_results.json": {
+      "bytes": 1219,
+      "sha256": "27bf03502b64fc1fd802149fc1a35c892aa622b68462aec396a43d2fe0e0012b"
+    },
+    "namepack_research/compression/elias_fano.py": {
+      "bytes": 6395,
+      "sha256": "e24046498ea00fe0322faebc530a90143c5b6f1cec72711cc5c9bb9cfcfc2c07"
+    },
+    "namepack_research/compression/ssa2024.ef64": {
+      "bytes": 71126,
+      "sha256": "29ccf770e53f94554b8849a8deca2e342142d8d1dca9ab8f5edb01477cca0a78"
+    },
+    "namepack_research/compression/ssa2024.ef32": {
+      "bytes": 72966,
+      "sha256": "e2b8f42b9762078915c8a82c061f38a51a4adde4863a996ced6b34652e68f460"
+    },
+    "namepack_research/compression/ssa2024.efb64": {
+      "bytes": 77190,
+      "sha256": "327192d5ca2712e11c264acbb9be5daf790aada1766b270303ed3ab95e2a4c0f"
+    },
+    "namepack/Cargo.toml": {
+      "bytes": 313,
+      "sha256": "bd3243a0312e4ba84fdcf3ac82a6b255467b58503881fb7ea1ca94f9e84ffbc1"
+    },
+    "namepack/Cargo.lock": {
+      "bytes": 152,
+      "sha256": "8b71af35e423660349c800c64b78098bf3781cbb81f4a7627d3884d86c21196f"
+    },
+    "namepack/src/lib.rs": {
+      "bytes": 596,
+      "sha256": "e8458f1d1d7bc0cceacb35fa35500b72d491e020cbeeaba132570980bbf21b8a"
+    },
+    "namepack/src/builder.rs": {
+      "bytes": 24673,
+      "sha256": "bb8abd59f1faa4a47722abc148515d313d3eb3391c88f32f75dc9af329a55a56"
+    },
+    "namepack/src/reader.rs": {
+      "bytes": 20544,
+      "sha256": "23edb4c7be455ff91f3446044b7140a3338d8adc8a8bb365b4a8a31e5f245dba"
+    },
+    "namepack/src/sampling.rs": {
+      "bytes": 2089,
+      "sha256": "fb58d6b7a1c719793dfee7740722dfcbe8487f301f696502ebf07c752033f5dc"
+    },
+    "namepack/src/format.rs": {
+      "bytes": 1109,
+      "sha256": "69f24e3eb396cb9622d19333bd2d85c6add56e7f6d2d916a6136080dde7cd051"
+    },
+    "namepack/src/error.rs": {
+      "bytes": 2763,
+      "sha256": "91c288b7e1aadd9b6ad23c3881a095c1fd5f997566948b6f6c2ea6ca1612c3f4"
+    },
+    "namepack/data/given_names_2024.npk": {
+      "bytes": 106230,
+      "sha256": "939ecbb1af9ca29afda3ae1e6f0ca7205a1ec64c1fd577946672b58da2955635"
+    }
+  },
+  "sampling": {
+    "timed": true,
+    "iterations_per_batch": 1000000,
+    "batches": 11,
+    "warmup_batches": 1,
+    "rotated_order": true,
+    "unicode_check_timed": true,
+    "full_byte_checksum_timed": true,
+    "same_trace": "per range reducer; modulo and multiply-high produce different uniform sequences"
+  },
+  "ef_comparison": {
+    "rng_timed": false,
+    "iterations_per_batch": 1000000,
+    "batches": 11,
+    "warmup_batches": 1,
+    "rotated_order": true,
+    "unicode_check_timed": true,
+    "full_byte_checksum_timed": true,
+    "same_trace": true,
+    "rank_translations_precomputed": true,
+    "all_names_verified": 29329
+  }
+}

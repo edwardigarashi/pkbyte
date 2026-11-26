@@ -1,0 +1,172 @@
+[
+  {
+    "checkpoint_every": 16,
+    "power_of_two_radix": false,
+    "total_bytes": 76618,
+    "breakdown": {
+      "alphabets": 2194,
+      "lows": 57728,
+      "highs": 8608,
+      "checkpoints": 7352,
+      "header": 64,
+      "directory": 672
+    },
+    "verified_exact_names": 29329,
+    "select_word_scans_mean": 1.279825428756521,
+    "select_word_scans_max": 9,
+    "select_word_scans_p99": 3
+  },
+  {
+    "checkpoint_every": 32,
+    "power_of_two_radix": false,
+    "total_bytes": 72966,
+    "breakdown": {
+      "alphabets": 2194,
+      "lows": 57728,
+      "highs": 8608,
+      "checkpoints": 3700,
+      "header": 64,
+      "directory": 672
+    },
+    "verified_exact_names": 29329,
+    "select_word_scans_mean": 1.5678338845511268,
+    "select_word_scans_max": 10,
+    "select_word_scans_p99": 5
+  },
+  {
+    "checkpoint_every": 64,
+    "power_of_two_radix": false,
+    "total_bytes": 71126,
+    "breakdown": {
+      "alphabets": 2194,
+      "lows": 57728,
+      "highs": 8608,
+      "checkpoints": 1860,
+      "header": 64,
+      "directory": 672
+    },
+    "verified_exact_names": 29329,
+    "select_word_scans_mean": 2.150840465068703,
+    "select_word_scans_max": 14,
+    "select_word_scans_p99": 7
+  },
+  {
+    "checkpoint_every": 128,
+    "power_of_two_radix": false,
+    "total_bytes": 70218,
+    "breakdown": {
+      "alphabets": 2194,
+      "lows": 57728,
+      "highs": 8608,
+      "checkpoints": 952,
+      "header": 64,
+      "directory": 672
+    },
+    "verified_exact_names": 29329,
+    "select_word_scans_mean": 3.264482253060111,
+    "select_word_scans_max": 20,
+    "select_word_scans_p99": 13
+  },
+  {
+    "checkpoint_every": 256,
+    "power_of_two_radix": false,
+    "total_bytes": 69762,
+    "breakdown": {
+      "alphabets": 2194,
+      "lows": 57728,
+      "highs": 8608,
+      "checkpoints": 496,
+      "header": 64,
+      "directory": 672
+    },
+    "verified_exact_names": 29329,
+    "select_word_scans_mean": 5.359405366701899,
+    "select_word_scans_max": 32,
+    "select_word_scans_p99": 19
+  },
+  {
+    "checkpoint_every": 16,
+    "power_of_two_radix": true,
+    "total_bytes": 82682,
+    "breakdown": {
+      "alphabets": 2194,
+      "lows": 63344,
+      "highs": 9056,
+      "checkpoints": 7352,
+      "header": 64,
+      "directory": 672
+    },
+    "verified_exact_names": 29329,
+    "select_word_scans_mean": 1.2670394490095127,
+    "select_word_scans_max": 13,
+    "select_word_scans_p99": 3
+  },
+  {
+    "checkpoint_every": 32,
+    "power_of_two_radix": true,
+    "total_bytes": 79030,
+    "breakdown": {
+      "alphabets": 2194,
+      "lows": 63344,
+      "highs": 9056,
+      "checkpoints": 3700,
+      "header": 64,
+      "directory": 672
+    },
+    "verified_exact_names": 29329,
+    "select_word_scans_mean": 1.5195881209724165,
+    "select_word_scans_max": 13,
+    "select_word_scans_p99": 5
+  },
+  {
+    "checkpoint_every": 64,
+    "power_of_two_radix": true,
+    "total_bytes": 77190,
+    "breakdown": {
+      "alphabets": 2194,
+      "lows": 63344,
+      "highs": 9056,
+      "checkpoints": 1860,
+      "header": 64,
+      "directory": 672
+    },
+    "verified_exact_names": 29329,
+    "select_word_scans_mean": 2.052575948719697,
+    "select_word_scans_max": 16,
+    "select_word_scans_p99": 8
+  },
+  {
+    "checkpoint_every": 128,
+    "power_of_two_radix": true,
+    "total_bytes": 76282,
+    "breakdown": {
+      "alphabets": 2194,
+      "lows": 63344,
+      "highs": 9056,
+      "checkpoints": 952,
+      "header": 64,
+      "directory": 672
+    },
+    "verified_exact_names": 29329,
+    "select_word_scans_mean": 3.213508813802039,
+    "select_word_scans_max": 25,
+    "select_word_scans_p99": 13
+  },
+  {
+    "checkpoint_every": 256,
+    "power_of_two_radix": true,
+    "total_bytes": 75826,
+    "breakdown": {
+      "alphabets": 2194,
+      "lows": 63344,
+      "highs": 9056,
+      "checkpoints": 496,
+      "header": 64,
+      "directory": 672
+    },
+    "verified_exact_names": 29329,
+    "select_word_scans_mean": 5.459136008728562,
+    "select_word_scans_max": 39,
+    "select_word_scans_p99": 21
+  }
+]

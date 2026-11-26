@@ -1,0 +1,544 @@
+{
+  "recorded_at_utc": "2026-11-25T13:47:24+00:00",
+  "environment": {
+    "cpu": "12th Gen Intel(R) Core(TM) i9-12900K",
+    "platform": "Linux-7.0.13-200.fc44.x86_64-x86_64-with-glibc2.43",
+    "cpu_affinity": [
+      4
+    ],
+    "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)\nbinary: rustc\ncommit-hash: 0ef1bc386059596dada8fb65b50425aab2ea637a\ncommit-date: 2026-11-09\nhost: x86_64-unknown-linux-gnu\nrelease: 1.100.0\nLLVM version: 23.1.5"
+  },
+  "configuration": {
+    "iterations": 500000,
+    "rounds": 9,
+    "seed": 42,
+    "range_reduction": "modulo",
+    "rng": "SplitMix64",
+    "harness_flags": [
+      "-O",
+      "-C",
+      "lto=thin",
+      "-C",
+      "codegen-units=1"
+    ],
+    "library_profile": "release",
+    "phase": "resident table bytes, warm picks and full returned-byte checksum"
+  },
+  "baseline_crate_sha256": "4b69581c6a39d134f6e5bb57938143baf583892ed807fc3862150ec1a755c28b",
+  "artifact_sha256": {
+    "target/picker-benchmark/baseline": "d962afee0d1ee82fd35c721bc604412ead6b495444a3f58a65a6fa3b8ab5b557",
+    "target/picker-benchmark/current": "a0249bd49a65f375ad1f184cb09025a02111037be221f0618063801a226f6158"
+  },
+  "input_sha256": {
+    "Cargo.lock": "75031b6ffb386b11637c80ea435d8d4fafc51751c7736ff668fc032cedb2f9d4",
+    "Cargo.toml": "9680708f9364845e90688d95cfe3fc9deab031a5168e4bf3f6051fe303a479d1",
+    "benchmarks/picker.rs": "c195ae77b16dbe5834aabe46af97cb9eebf73478601f770337b23024ed4f3af3",
+    "data/given_names_2024.npk": "939ecbb1af9ca29afda3ae1e6f0ca7205a1ec64c1fd577946672b58da2955635",
+    "data/ssa_2024_given_names.txt": "a9c432e163d94e066fc068020f249b333f4ff1703298ecacc13e579bcbeff396",
+    "src/build_support.rs": "bcb1eda334dd925b9cf2ec10c256b97e3cc0811d76a7be2cf1efb169e9276877",
+    "src/builder.rs": "72cb5e98e6443cf329e250972ae343a7e1171acdc7fe14f225c4814a8b206e63",
+    "src/ef.rs": "1877a8e57009995c7b295326a25ffea0b14927f90a12be1b4e00fe38e160a655",
+    "src/error.rs": "f329c80529583b990f1e6b21df54d7262df64062ca31dc2e5e7e580746253e36",
+    "src/format.rs": "3cfd994680ac6a3150b46f01c10e0df7a9a20ef92e06f69c84c52ef727b2801d",
+    "src/lib.rs": "ba033b9afac35ba4f31479f602da050abb42f7f329f00cd6f55add63fc312751",
+    "src/picker.rs": "5407dddb5cf5867e1cd6d6d60f82ecf8afb609d1f9123a9cec38c64f4da6a485",
+    "src/reader/prepared.rs": "21ba791db9df0293c29a2af68a6d5fd559afc6fdb49bd4ce0dac24d8d0de0563",
+    "src/reader.rs": "e29a9f2631c42b0753a95cad2ff264154f4bff3a1f8309fd2f535ff841c4aa9d",
+    "src/sampling.rs": "cd58c70a129912038d0f52fcf58b861e2ad42b1b94e6a057921761b38220f371",
+    "src/text.rs": "2dfe39a6772a5ae851df7493b9101efff649fbb61f64fa371980383cc4cb9212"
+  },
+  "results": {
+    "baseline": {
+      "ssa_v1": {
+        "Prepared": {
+          "median_setup_ms": 5.327134,
+          "median_ns_per_pick": 25.021682,
+          "rounds": [
+            {
+              "round": 0,
+              "setup_ns": 5441797,
+              "batch_ns": 12590214,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 1,
+              "setup_ns": 5326150,
+              "batch_ns": 12660795,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 2,
+              "setup_ns": 5498375,
+              "batch_ns": 12657614,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 3,
+              "setup_ns": 5478694,
+              "batch_ns": 12572292,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 4,
+              "setup_ns": 5275604,
+              "batch_ns": 12374797,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 5,
+              "setup_ns": 5257125,
+              "batch_ns": 12510841,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 6,
+              "setup_ns": 5327134,
+              "batch_ns": 12341391,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 7,
+              "setup_ns": 5358854,
+              "batch_ns": 12246895,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 8,
+              "setup_ns": 5292790,
+              "batch_ns": 12285990,
+              "checksum": "31eb6555cee7089b"
+            }
+          ]
+        }
+      },
+      "ssa_v3": {
+        "Prepared": {
+          "median_setup_ms": 5.634111,
+          "median_ns_per_pick": 55.117302,
+          "rounds": [
+            {
+              "round": 0,
+              "setup_ns": 5834043,
+              "batch_ns": 27685994,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 1,
+              "setup_ns": 5837846,
+              "batch_ns": 27134861,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 2,
+              "setup_ns": 5611111,
+              "batch_ns": 27702853,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 3,
+              "setup_ns": 5649427,
+              "batch_ns": 27064186,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 4,
+              "setup_ns": 5518973,
+              "batch_ns": 27485871,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 5,
+              "setup_ns": 5642960,
+              "batch_ns": 27523710,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 6,
+              "setup_ns": 5535965,
+              "batch_ns": 27785180,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 7,
+              "setup_ns": 5634111,
+              "batch_ns": 27868201,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 8,
+              "setup_ns": 5579225,
+              "batch_ns": 27558651,
+              "checksum": "8abede13487f397a"
+            }
+          ]
+        }
+      }
+    },
+    "current": {
+      "ssa_v1": {
+        "Prepared": {
+          "median_setup_ms": 5.293863,
+          "median_ns_per_pick": 25.777186,
+          "rounds": [
+            {
+              "round": 0,
+              "setup_ns": 5421002,
+              "batch_ns": 12658255,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 1,
+              "setup_ns": 5208739,
+              "batch_ns": 12962888,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 2,
+              "setup_ns": 5293863,
+              "batch_ns": 12565811,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 3,
+              "setup_ns": 5291508,
+              "batch_ns": 12789168,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 4,
+              "setup_ns": 5312286,
+              "batch_ns": 12994295,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 5,
+              "setup_ns": 5292684,
+              "batch_ns": 12876814,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 6,
+              "setup_ns": 5395083,
+              "batch_ns": 12888593,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 7,
+              "setup_ns": 5282477,
+              "batch_ns": 12939281,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 8,
+              "setup_ns": 5452594,
+              "batch_ns": 13012901,
+              "checksum": "31eb6555cee7089b"
+            }
+          ]
+        },
+        "PickerReuse": {
+          "median_setup_ms": 5.308621,
+          "median_ns_per_pick": 27.148544,
+          "rounds": [
+            {
+              "round": 0,
+              "setup_ns": 5289698,
+              "batch_ns": 13592429,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 1,
+              "setup_ns": 5394704,
+              "batch_ns": 13549258,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 2,
+              "setup_ns": 5150394,
+              "batch_ns": 13377542,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 3,
+              "setup_ns": 5308621,
+              "batch_ns": 13552460,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 4,
+              "setup_ns": 5371265,
+              "batch_ns": 13574272,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 5,
+              "setup_ns": 5242063,
+              "batch_ns": 13722578,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 6,
+              "setup_ns": 5439647,
+              "batch_ns": 13792785,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 7,
+              "setup_ns": 5375513,
+              "batch_ns": 13728402,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 8,
+              "setup_ns": 5287302,
+              "batch_ns": 13565691,
+              "checksum": "31eb6555cee7089b"
+            }
+          ]
+        },
+        "PickerOwned": {
+          "median_setup_ms": 5.339789,
+          "median_ns_per_pick": 34.786764,
+          "rounds": [
+            {
+              "round": 0,
+              "setup_ns": 5339789,
+              "batch_ns": 17405392,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 1,
+              "setup_ns": 5297440,
+              "batch_ns": 17145132,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 2,
+              "setup_ns": 5202025,
+              "batch_ns": 17491812,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 3,
+              "setup_ns": 5261531,
+              "batch_ns": 17359637,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 4,
+              "setup_ns": 5257193,
+              "batch_ns": 17298346,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 5,
+              "setup_ns": 5452890,
+              "batch_ns": 17182656,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 6,
+              "setup_ns": 5473850,
+              "batch_ns": 17478265,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 7,
+              "setup_ns": 5511286,
+              "batch_ns": 17393382,
+              "checksum": "31eb6555cee7089b"
+            },
+            {
+              "round": 8,
+              "setup_ns": 5457732,
+              "batch_ns": 17568201,
+              "checksum": "31eb6555cee7089b"
+            }
+          ]
+        }
+      },
+      "ssa_v3": {
+        "Prepared": {
+          "median_setup_ms": 5.746714,
+          "median_ns_per_pick": 55.965418,
+          "rounds": [
+            {
+              "round": 0,
+              "setup_ns": 5961745,
+              "batch_ns": 28636288,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 1,
+              "setup_ns": 5746714,
+              "batch_ns": 27740853,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 2,
+              "setup_ns": 5752505,
+              "batch_ns": 27982709,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 3,
+              "setup_ns": 5710006,
+              "batch_ns": 28129204,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 4,
+              "setup_ns": 5762637,
+              "batch_ns": 28314421,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 5,
+              "setup_ns": 5854894,
+              "batch_ns": 28006331,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 6,
+              "setup_ns": 5673911,
+              "batch_ns": 27742154,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 7,
+              "setup_ns": 5731436,
+              "batch_ns": 27722476,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 8,
+              "setup_ns": 5692312,
+              "batch_ns": 27724468,
+              "checksum": "8abede13487f397a"
+            }
+          ]
+        },
+        "PickerReuse": {
+          "median_setup_ms": 5.821435,
+          "median_ns_per_pick": 57.2198,
+          "rounds": [
+            {
+              "round": 0,
+              "setup_ns": 5767815,
+              "batch_ns": 28609900,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 1,
+              "setup_ns": 5817997,
+              "batch_ns": 28528988,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 2,
+              "setup_ns": 5856959,
+              "batch_ns": 28668140,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 3,
+              "setup_ns": 5661509,
+              "batch_ns": 28629268,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 4,
+              "setup_ns": 5939725,
+              "batch_ns": 28385187,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 5,
+              "setup_ns": 5882490,
+              "batch_ns": 28381938,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 6,
+              "setup_ns": 6012973,
+              "batch_ns": 29196800,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 7,
+              "setup_ns": 5821435,
+              "batch_ns": 28634411,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 8,
+              "setup_ns": 5553984,
+              "batch_ns": 28292420,
+              "checksum": "8abede13487f397a"
+            }
+          ]
+        },
+        "PickerOwned": {
+          "median_setup_ms": 5.739921,
+          "median_ns_per_pick": 64.691972,
+          "rounds": [
+            {
+              "round": 0,
+              "setup_ns": 5620968,
+              "batch_ns": 32671455,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 1,
+              "setup_ns": 5712185,
+              "batch_ns": 32311772,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 2,
+              "setup_ns": 5739921,
+              "batch_ns": 32345986,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 3,
+              "setup_ns": 5846002,
+              "batch_ns": 32382782,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 4,
+              "setup_ns": 5716378,
+              "batch_ns": 32464323,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 5,
+              "setup_ns": 5831016,
+              "batch_ns": 32673913,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 6,
+              "setup_ns": 5809902,
+              "batch_ns": 32109709,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 7,
+              "setup_ns": 5826458,
+              "batch_ns": 32229719,
+              "checksum": "8abede13487f397a"
+            },
+            {
+              "round": 8,
+              "setup_ns": 5594961,
+              "batch_ns": 31690922,
+              "checksum": "8abede13487f397a"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

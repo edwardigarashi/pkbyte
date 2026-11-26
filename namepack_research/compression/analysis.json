@@ -1,0 +1,176 @@
+{
+  "current_bytes": 106230,
+  "names": 29329,
+  "raw_name_bytes": 178667,
+  "huffman_same_tokenization": {
+    "proposed_container_bytes": 100723,
+    "actual_payload_bytes": 98451,
+    "status": "payload_built_and_exhaustively_verified; metadata_size_accounted_not_serialized",
+    "header_bytes": 64,
+    "dictionary_bytes": 800,
+    "huffman_lengths_bytes": 256,
+    "directory_bytes": 1152,
+    "groups": 72,
+    "verified_names": 29329
+  },
+  "huffman_code_lengths": {
+    "6": 16,
+    "7": 40,
+    "8": 59,
+    "9": 75,
+    "10": 58,
+    "11": 8
+  },
+  "huffman_dp_reparse": {
+    "proposed_container_bytes": 100006,
+    "actual_payload_bytes": 97782,
+    "status": "payload_built_and_exhaustively_verified; metadata_size_accounted_not_serialized",
+    "header_bytes": 64,
+    "dictionary_bytes": 800,
+    "huffman_lengths_bytes": 256,
+    "directory_bytes": 1104,
+    "groups": 69,
+    "verified_names": 29329
+  },
+  "dawg": {
+    "trie_states": 58272,
+    "states": 10416,
+    "arcs": 30437,
+    "verified_names": 29329,
+    "max_count": 29329
+  },
+  "ef_size_only": {
+    "groups": [
+      {
+        "length": 2,
+        "count": 47,
+        "universe": 309,
+        "low_bits_each": 2,
+        "payload_bytes": 28,
+        "alphabet_bytes": 38,
+        "max_value_bits": 9
+      },
+      {
+        "length": 3,
+        "count": 496,
+        "universe": 15535,
+        "low_bits_each": 4,
+        "payload_bytes": 432,
+        "alphabet_bytes": 78,
+        "max_value_bits": 14
+      },
+      {
+        "length": 4,
+        "count": 2751,
+        "universe": 438551,
+        "low_bits_each": 7,
+        "payload_bytes": 3181,
+        "alphabet_bytes": 107,
+        "max_value_bits": 19
+      },
+      {
+        "length": 5,
+        "count": 6763,
+        "universe": 11401331,
+        "low_bits_each": 10,
+        "payload_bytes": 10692,
+        "alphabet_bytes": 134,
+        "max_value_bits": 24
+      },
+      {
+        "length": 6,
+        "count": 8994,
+        "universe": 296392837,
+        "low_bits_each": 15,
+        "payload_bytes": 19119,
+        "alphabet_bytes": 161,
+        "max_value_bits": 29
+      },
+      {
+        "length": 7,
+        "count": 6155,
+        "universe": 7704578909,
+        "low_bits_each": 20,
+        "payload_bytes": 17076,
+        "alphabet_bytes": 188,
+        "max_value_bits": 33
+      },
+      {
+        "length": 8,
+        "count": 2698,
+        "universe": 170995929257,
+        "low_bits_each": 25,
+        "payload_bytes": 9407,
+        "alphabet_bytes": 211,
+        "max_value_bits": 38
+      },
+      {
+        "length": 9,
+        "count": 935,
+        "universe": 2863593916260,
+        "low_bits_each": 31,
+        "payload_bytes": 3908,
+        "alphabet_bytes": 228,
+        "max_value_bits": 42
+      },
+      {
+        "length": 10,
+        "count": 303,
+        "universe": 27640416441123,
+        "low_bits_each": 36,
+        "payload_bytes": 1453,
+        "alphabet_bytes": 233,
+        "max_value_bits": 45
+      },
+      {
+        "length": 11,
+        "count": 109,
+        "universe": 108125465539441,
+        "low_bits_each": 39,
+        "payload_bytes": 571,
+        "alphabet_bytes": 221,
+        "max_value_bits": 47
+      },
+      {
+        "length": 12,
+        "count": 37,
+        "universe": 60207898508543,
+        "low_bits_each": 40,
+        "payload_bytes": 197,
+        "alphabet_bytes": 183,
+        "max_value_bits": 46
+      },
+      {
+        "length": 13,
+        "count": 32,
+        "universe": 26417362457951,
+        "low_bits_each": 39,
+        "payload_bytes": 167,
+        "alphabet_bytes": 157,
+        "max_value_bits": 45
+      },
+      {
+        "length": 14,
+        "count": 6,
+        "universe": 6754706639,
+        "low_bits_each": 30,
+        "payload_bytes": 25,
+        "alphabet_bytes": 86,
+        "max_value_bits": 33
+      },
+      {
+        "length": 15,
+        "count": 3,
+        "universe": 126210,
+        "low_bits_each": 15,
+        "payload_bytes": 7,
+        "alphabet_bytes": 50,
+        "max_value_bits": 17
+      }
+    ],
+    "payload_bytes": 66263,
+    "alphabet_bytes": 2075,
+    "select_index_not_included": true,
+    "base_values_not_included": true
+  }
+}

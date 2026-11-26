@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "provenance": {
+    "source": "source-readme.txt, Performance tradeoffs section",
+    "source_sha256": "31657b9ab2a9dd1158635691225aadeed888f2f91e714cf826e213d117060c92",
+    "evidence_status": "Reported in the supplied README; benchmark artifacts were not provided and measurements were not rerun for this documentation update.",
+    "benchmark_source_revision": null,
+    "benchmark_run_date": null,
+    "generation_note": "Rendering these figures reproduces the reported aggregates. It does not run a benchmark."
+  },
+  "dataset": {
+    "name": "Included SSA dataset",
+    "unique_values": 29329
+  },
+  "environment": {
+    "rust": "1.100.0",
+    "os_arch": "Linux x86-64",
+    "cpu": "Intel Core i9-12900K"
+  },
+  "file_sizes_bytes": {
+    "Raw": 178955,
+    "Phrase": 106230,
+    "Compact": 70868
+  },
+  "warm_sampling_ns_per_value": {
+    "Loaded vector": 30.45,
+    "Prepared pkbyte compact": 57.561,
+    "Prepared SQLite transaction": 251.036
+  },
+  "sampling_method": {
+    "statistic": "Median of repeated batch averages",
+    "trace": "Matching value traces",
+    "includes": [
+      "RNG",
+      "retrieval",
+      "copying",
+      "UTF-8 checking",
+      "checksum"
+    ],
+    "excludes": [
+      "initialization",
+      "CLI process startup",
+      "CLI output formatting"
+    ],
+    "notes": "The provided README identifies a prepared SQLite warm read transaction but does not include the exact SQL query. These are not per-request p50 latencies or Picker::pick() owned-result measurements."
+  },
+  "initialization": {
+    "median_ms": 5.699,
+    "scope": "Embedded bytes: structural open, full preparation, scratch initialization"
+  },
+  "heap": {
+    "checked_metadata_bytes": 2096,
+    "additional_prepared_metadata_bytes": 3668,
+    "scratch_bytes_per_caller": 15,
+    "scope": "Reported retained components, not total RSS or peak startup memory"
+  },
+  "embedded_benchmark_executable_bytes": 2466136,
+  "analytical_model": {
+    "formula": "average_ns(q) = initialization_ms * 1e6 / q + prepared_compact_ns",
+    "scope": "Illustrative amortization from two reported aggregates; not a measured series, not a SQLite break-even analysis"
+  },
+  "figure_tooling": {
+    "python_package": "matplotlib",
+    "version_used": "3.10.8"
+  }
+}

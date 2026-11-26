@@ -1,0 +1,15 @@
+{
+  "source_url": "https://www.ssa.gov/oact/babynames/names.zip",
+  "catalog_url": "https://catalog.data.gov/dataset/baby-names-from-social-security-card-applications-national-data",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "archive_sha256": "cd78e975ed7bb358e018dd62fbe14ced89295e9581c49172ca4eedcb011b3724",
+  "archive_bytes": 7860026,
+  "selected_member": "yob2024.txt",
+  "selected_member_sha256": "0088c78eebc105500acef58872bc3c73a4c41d6eaa92cb2a163d959e8c2a3e84",
+  "source_rows": 32020,
+  "unique_names": 29329,
+  "fixture_bytes": 207996,
+  "fixture_sha256": "a9c432e163d94e066fc068020f249b333f4ff1703298ecacc13e579bcbeff396",
+  "all_names_ascii": true,
+  "transform": "Exact string deduplication across sex categories; UTF-8 byte sort; LF after every name; no case conversion or Unicode normalization."
+}

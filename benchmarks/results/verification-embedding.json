@@ -1,0 +1,187 @@
+{
+  "table": {
+    "version": 3,
+    "values": 29329,
+    "decoded_bytes": 178667,
+    "portable_bytes": 70868,
+    "payload_bytes": 70580,
+    "container_overhead_bytes": 288,
+    "dictionary_bytes": 0,
+    "groups": 14,
+    "raw_rows": 56,
+    "phrase_rows": 0,
+    "ef_mixed_rows": 29273,
+    "ef_power_of_two_rows": 0,
+    "ef_block_bytes": 70357
+  },
+  "retained": {
+    "checked_metadata_heap_bytes": 2096,
+    "prepared_additional_heap_bytes": 3668,
+    "prepared_hint_bytes": 3668,
+    "scratch_initialized_bytes": 15,
+    "scratch_heap_capacity_bytes": 15
+  },
+  "configuration": {
+    "rounds": 9,
+    "iterations_per_batch": 500000,
+    "unreported_warmup_batches": 1,
+    "seed_hex": "5a17e6d9b0432c81",
+    "rng": "SplitMix64",
+    "rank_reduction": "multiply high",
+    "max_hint_bytes": 4096
+  },
+  "startup": {
+    "open_structural": {
+      "median_ns": 89419.0,
+      "elapsed_ns": [
+        91752,
+        85695,
+        92323,
+        90335,
+        89174,
+        89419,
+        88639,
+        89302,
+        89429
+      ],
+      "allocation_calls": 4,
+      "allocation_requested_bytes": 3248,
+      "allocation_peak_live_bytes": 2096,
+      "allocation_live_bytes_at_return": 2096
+    },
+    "prepare_with_crc_and_uniqueness": {
+      "median_ns": 5609613.0,
+      "elapsed_ns": [
+        4885335,
+        5005685,
+        5002267,
+        8454568,
+        5149312,
+        5889423,
+        6081953,
+        5609613,
+        5730704
+      ],
+      "allocation_calls": 33286,
+      "allocation_requested_bytes": 1333366,
+      "allocation_peak_live_bytes": 1329682,
+      "allocation_live_bytes_at_return": 3668
+    },
+    "initialize_scratch": {
+      "median_ns": 26.0,
+      "elapsed_ns": [
+        26,
+        24,
+        25,
+        31,
+        23,
+        22,
+        26,
+        42,
+        30
+      ],
+      "allocation_calls": 1,
+      "allocation_requested_bytes": 15,
+      "allocation_peak_live_bytes": 15,
+      "allocation_live_bytes_at_return": 15
+    },
+    "total": {
+      "median_ns": 5698957.0,
+      "elapsed_ns": [
+        4977113,
+        5091404,
+        5094615,
+        8544934,
+        5238509,
+        5978864,
+        6170618,
+        5698957,
+        5820163
+      ]
+    }
+  },
+  "warm_prepared_sampling": {
+    "median_ns_per_sample": 51.048,
+    "elapsed_ns": [
+      26351504,
+      26410124,
+      25461200,
+      25639282,
+      25523853,
+      25523647,
+      25473764,
+      25508886,
+      25583367
+    ],
+    "checksum_hex": "eb80fd5ea38e50b5",
+    "allocation_calls": 0,
+    "allocation_requested_bytes": 0,
+    "allocation_peak_live_bytes": 0
+  },
+  "dataset": {
+    "path": "data/ssa_2024_given_names.txt",
+    "sha256": "a9c432e163d94e066fc068020f249b333f4ff1703298ecacc13e579bcbeff396",
+    "format": "lines"
+  },
+  "embedding": {
+    "source_wrapper_bytes": 95,
+    "serialized_prepared_metadata_bytes": 0,
+    "benchmark_executable_bytes": 2466136,
+    "exact_portable_table_occurrences_in_executable": 1,
+    "generated_files": [
+      "pkbyte_table.npk",
+      "pkbyte_table.rs"
+    ]
+  },
+  "environment": {
+    "run_started_utc": "2026-11-25T13:04:08+00:00",
+    "platform": "Linux-7.0.13-200.fc44.x86_64-x86_64-with-glibc2.43",
+    "cpu_architecture": "x86_64",
+    "cpu_model": "12th Gen Intel(R) Core(TM) i9-12900K",
+    "logical_cpus": 24,
+    "available_logical_cpus": 24,
+    "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)\nbinary: rustc\ncommit-hash: 0ef1bc386059596dada8fb65b50425aab2ea637a\ncommit-date: 2026-11-09\nhost: x86_64-unknown-linux-gnu\nrelease: 1.100.0\nLLVM version: 23.1.5",
+    "cargo": "cargo 1.100.0 (3acc79c0c 2026-11-05)",
+    "library_build": "Cargo release profile (thin LTO, one code-generation unit)",
+    "generator_and_harness_build": "rustc -O -C lto=thin -C codegen-units=1, no stripping option"
+  },
+  "reproduction": {
+    "rustup_toolchain": "1.100.0",
+    "command": [
+      "python3",
+      "benchmarks/run_embedding.py",
+      "--iterations",
+      "500000",
+      "--rounds",
+      "9"
+    ],
+    "source_sha256": {
+      "Cargo.toml": "f90fa4d27f1139e1f7a53aecf1b3b55954e08dfc2c269443e7f40b00af97ecbf",
+      "Cargo.lock": "5a8edc83fe739da4a05af8f464a3afda6f3ad065c5ef980d008a3b51ae0fa582",
+      "benchmarks/allocations.rs": "4673b30d9066124d8cfc22d45f3c7981d9c67b1180c2ef62f471b29b5fa9f314",
+      "benchmarks/embedding.rs": "f5146fc61e0e5297b20f120c18abfbe4408c901c4d59bbd1958a7fee102e462f",
+      "benchmarks/embedding_generate.rs": "61b120fed529cda0425a9b0fc8de0acbb649774b4c72fb221c4799619f05c132",
+      "benchmarks/run_embedding.py": "cdd932e2807f7661bb63aeec8bf1122ebb526aee492a46a8e493f42fae23e49a",
+      "data/ssa_2024_given_names.txt": "a9c432e163d94e066fc068020f249b333f4ff1703298ecacc13e579bcbeff396",
+      "src/bin/pkbyte/jsonl.rs": "54e927e94fd0e278f2726af0822e36185e422b9f6d261840a82d593d019fcef2",
+      "src/bin/pkbyte.rs": "c52ef952b2e50b9fc682107b1457498159824c682e8bdbaf583181487ef8cf65",
+      "src/build_support.rs": "b3f0c20e89016291bfd21b72aafef8b785fdbf56d085cf1450b868536bcb3318",
+      "src/builder.rs": "cc4db2582ce61f37d8adb1ffe01268cbd6d82c29160cd56f833f0efbfa38c44b",
+      "src/ef.rs": "9ef7766f3656ba2a7b3faedce3ad773e2142722ce877c1db025ff8760032e57f",
+      "src/error.rs": "baf1e0e9902b575a845440c9fbab2b6d7d42f7ad269dd6745174240900ef7a96",
+      "src/format.rs": "3cfd994680ac6a3150b46f01c10e0df7a9a20ef92e06f69c84c52ef727b2801d",
+      "src/lib.rs": "c813a5fd7c49bab3ad8fff897b4147ef5d98f64583500e456362783a1241d058",
+      "src/reader/prepared.rs": "7848e67e74de061fdee4336969d79b31f732a586b2b92aa644790bf9619a5e7c",
+      "src/reader.rs": "1794307d90b1fb938187106b4f57aa4dbf69af749949321a47543c8ec4d0edcf",
+      "src/sampling.rs": "63c8c31c95a5bda0f49eaa2a94d6dbd29748702393a33a56ce3286ea4ffe6543",
+      "src/text.rs": "2dfe39a6772a5ae851df7493b9101efff649fbb61f64fa371980383cc4cb9212"
+    },
+    "artifact_sha256": {
+      "release_rlib": "b0a674e70e165a3ceba3e1d4d4f25e824c630807bbd669d39fd885b2c66c7244",
+      "generator_executable": "8f8573981e3d535e19a3ae9aa852b7f8fda4c75d2191ac585fef4ebd229427b7",
+      "benchmark_executable": "cd3d2fdbf6824d0dcb32114d756b17482694fa599503a4f0256dbc209132ba5f",
+      "portable_table": "adf902a86dcd4cbc35ef20827bf3a9ec4e84a8a5db86c5a208bc9fbf40c5a5fc",
+      "source_wrapper": "d4443e333576dbace48f39c1ca03a373cb2ca86334e07e42c829defd68eb393a"
+    }
+  }
+}

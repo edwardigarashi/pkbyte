@@ -1,0 +1,12 @@
+[package]
+name = "pkbyte-generated-example"
+version = "0.0.0"
+edition = "2021"
+rust-version = "1.74"
+publish = false
+
+[dependencies]
+pkbyte = { path = "../.." }
+
+[build-dependencies]
+pkbyte = { path = "../.." }

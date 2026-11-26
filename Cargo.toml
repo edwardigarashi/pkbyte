@@ -1,0 +1,39 @@
+[package]
+name = "pkbyte"
+version = "0.1.1"
+edition = "2021"
+rust-version = "1.74"
+description = "Rust library and CLI for compact immutable UTF-8 string tables with uniform sampling"
+license = "MIT"
+publish = ["crates-io"]
+readme = "README.md"
+repository = "https://github.com/edwardigarashi/pkbyte"
+documentation = "https://docs.rs/pkbyte"
+keywords = ["compression", "utf-8", "sampling", "string-table", "elias-fano"]
+categories = ["compression", "data-structures", "command-line-utilities"]
+include = [
+    "/AGENTS.md", "/CHANGELOG.md", "/CONTRIBUTING.md", "/README.md",
+    "/LICENSE",
+    "/docs/*.md", "/docs/*.sha256", "/licenses/*", "/src/**", "/tests/**",
+    "/docs/assets/readme/*.svg", "/docs/assets/readme/measurements.json",
+    "/docs/assets/readme/storage.png", "/docs/assets/readme/sampling.png",
+    "/data/PROVENANCE.md", "/data/ssa_2024_given_names.source.json",
+    "/data/ssa_2024_given_names.txt", "/data/given_names_2024.npk",
+    "/examples/*.rs", "/examples/generated/Cargo.toml.in",
+    "/examples/generated/Cargo.lock.in", "/examples/generated/README.md",
+    "/examples/generated/build.rs", "/examples/generated/values.jsonl",
+    "/examples/generated/src/main.rs",
+    "/benchmarks/README.md", "/benchmarks/*.rs", "/benchmarks/*.py",
+    "/benchmarks/results/*.json", "/tools/*.py",
+]
+
+[dependencies]
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+
+[[bin]]
+name = "pkbyte"
+path = "src/bin/pkbyte.rs"
+

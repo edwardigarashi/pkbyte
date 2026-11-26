@@ -1,0 +1,1683 @@
+{
+  "iterations_per_warm_batch": 250000,
+  "measured_rounds": 7,
+  "measured_build_rounds": 3,
+  "unreported_warmup_rounds": 1,
+  "value_byte_limit": 8192,
+  "sampling_seed_hex": "5a17e6d9b0432c81",
+  "datasets": [
+    {
+      "dataset": "ssa_2024",
+      "rows": 29329,
+      "matched_trace_checksum_hex": "064b5d308a206071",
+      "matched_trace_output_bytes": 1522641,
+      "modes": [
+        {
+          "mode": "raw",
+          "format_version": 2,
+          "file_bytes": 178955,
+          "decoded_bytes": 178667,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 0,
+          "raw_rows": 29329,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 0,
+          "ef_power_of_two_rows": 0,
+          "groups": 14,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 560,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 3668,
+          "prepared_hint_bytes": 3668,
+          "checked_scratch_capacity_bytes": 15,
+          "prepared_scratch_required_bytes": 15,
+          "local_trace_checksum_hex": "ae675485cda7e0df",
+          "local_trace_output_bytes": 1523000,
+          "setup": {
+            "build": {
+              "median_ns": 1392392.0,
+              "elapsed_ns": [
+                1392392,
+                1390807,
+                1394766
+              ]
+            },
+            "structural_open": {
+              "median_ns": 1542.0,
+              "elapsed_ns": [
+                25101,
+                840,
+                384,
+                1684,
+                1542,
+                308,
+                1614
+              ]
+            },
+            "normal_open": {
+              "median_ns": 292497.0,
+              "elapsed_ns": [
+                316502,
+                286580,
+                292420,
+                316699,
+                292497,
+                310736,
+                291219
+              ]
+            },
+            "full_validation": {
+              "median_ns": 4747551.0,
+              "elapsed_ns": [
+                4819134,
+                4676500,
+                4747551,
+                4810628,
+                4791530,
+                4690161,
+                4624531
+              ]
+            },
+            "prepare": {
+              "median_ns": 4720411.0,
+              "elapsed_ns": [
+                4729158,
+                4737634,
+                4679560,
+                4712397,
+                4739444,
+                4702187,
+                4720411
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 16.623,
+              "elapsed_ns": [
+                4093690,
+                4185340,
+                4150540,
+                4155723,
+                4237790,
+                4158747,
+                4075108
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 18.292,
+              "elapsed_ns": [
+                4426799,
+                4560451,
+                4572996,
+                4696019,
+                4679585,
+                4592888,
+                4551422
+              ]
+            }
+          },
+          "file_sha256": "3b0bba2db849b356f1fbd2708c310bdaa10f2a7cc33b4a6073016ae6404e42bf"
+        },
+        {
+          "mode": "phrase",
+          "format_version": 2,
+          "file_bytes": 106230,
+          "decoded_bytes": 178667,
+          "dictionary_bytes": 800,
+          "elias_fano_bytes": 0,
+          "raw_rows": 480,
+          "phrase_rows": 28849,
+          "ef_mixed_rows": 0,
+          "ef_power_of_two_rows": 0,
+          "groups": 16,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 4736,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 5972,
+          "prepared_hint_bytes": 3668,
+          "checked_scratch_capacity_bytes": 15,
+          "prepared_scratch_required_bytes": 22,
+          "local_trace_checksum_hex": "f95d1ffed06bf960",
+          "local_trace_output_bytes": 1523514,
+          "setup": {
+            "build": {
+              "median_ns": 59624268.0,
+              "elapsed_ns": [
+                59624268,
+                64352153,
+                59565880
+              ]
+            },
+            "structural_open": {
+              "median_ns": 46941.0,
+              "elapsed_ns": [
+                53062,
+                41600,
+                46941,
+                57386,
+                42301,
+                47421,
+                40939
+              ]
+            },
+            "normal_open": {
+              "median_ns": 209589.0,
+              "elapsed_ns": [
+                223320,
+                209003,
+                250230,
+                209589,
+                209636,
+                206726,
+                204929
+              ]
+            },
+            "full_validation": {
+              "median_ns": 5245180.0,
+              "elapsed_ns": [
+                5245180,
+                5221290,
+                5278989,
+                5895853,
+                5421829,
+                5137689,
+                5242460
+              ]
+            },
+            "prepare": {
+              "median_ns": 5252349.0,
+              "elapsed_ns": [
+                5166303,
+                5238643,
+                5420239,
+                5350700,
+                5335003,
+                5171626,
+                5252349
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 21.85,
+              "elapsed_ns": [
+                5249220,
+                5407435,
+                5462531,
+                5478593,
+                5507643,
+                5592701,
+                5425720
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 23.929,
+              "elapsed_ns": [
+                5743232,
+                5982228,
+                5993136,
+                6085516,
+                5984387,
+                5877542,
+                5975227
+              ]
+            }
+          },
+          "file_sha256": "1493b943a984a387eea7cceefe57b5a10440a0598029db9f4879e46c2a8c94cc"
+        },
+        {
+          "mode": "elias_fano_mixed",
+          "format_version": 3,
+          "file_bytes": 70868,
+          "decoded_bytes": 178667,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 70357,
+          "raw_rows": 56,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 29273,
+          "ef_power_of_two_rows": 0,
+          "groups": 14,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 2096,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 3668,
+          "prepared_hint_bytes": 3668,
+          "checked_scratch_capacity_bytes": 15,
+          "prepared_scratch_required_bytes": 15,
+          "local_trace_checksum_hex": "34908884fe27ffc9",
+          "local_trace_output_bytes": 1523057,
+          "setup": {
+            "build": {
+              "median_ns": 2148480.0,
+              "elapsed_ns": [
+                2148040,
+                2148480,
+                2787188
+              ]
+            },
+            "structural_open": {
+              "median_ns": 93944.0,
+              "elapsed_ns": [
+                105493,
+                89615,
+                98753,
+                96206,
+                93500,
+                93944,
+                90998
+              ]
+            },
+            "normal_open": {
+              "median_ns": 202409.0,
+              "elapsed_ns": [
+                204462,
+                202409,
+                224346,
+                201692,
+                202382,
+                202053,
+                206467
+              ]
+            },
+            "full_validation": {
+              "median_ns": 5655095.0,
+              "elapsed_ns": [
+                5471437,
+                5677995,
+                5696795,
+                5610499,
+                5722031,
+                5624449,
+                5655095
+              ]
+            },
+            "prepare": {
+              "median_ns": 5704888.0,
+              "elapsed_ns": [
+                5477818,
+                5716854,
+                5613311,
+                5704888,
+                5751031,
+                5837059,
+                5702511
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 51.991,
+              "elapsed_ns": [
+                12853145,
+                13089020,
+                12934985,
+                12981504,
+                12997632,
+                13034730,
+                13166671
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 55.01,
+              "elapsed_ns": [
+                13481825,
+                13752408,
+                13707353,
+                13820380,
+                13761090,
+                13425597,
+                13854783
+              ]
+            }
+          },
+          "file_sha256": "adf902a86dcd4cbc35ef20827bf3a9ec4e84a8a5db86c5a208bc9fbf40c5a5fc"
+        },
+        {
+          "mode": "elias_fano_power_of_two",
+          "format_version": 3,
+          "file_bytes": 76924,
+          "decoded_bytes": 178667,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 76413,
+          "raw_rows": 56,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 0,
+          "ef_power_of_two_rows": 29273,
+          "groups": 14,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 2096,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 3668,
+          "prepared_hint_bytes": 3668,
+          "checked_scratch_capacity_bytes": 15,
+          "prepared_scratch_required_bytes": 15,
+          "local_trace_checksum_hex": "34908884fe27ffc9",
+          "local_trace_output_bytes": 1523057,
+          "setup": {
+            "build": {
+              "median_ns": 2183959.0,
+              "elapsed_ns": [
+                2181778,
+                2183959,
+                2321567
+              ]
+            },
+            "structural_open": {
+              "median_ns": 91154.0,
+              "elapsed_ns": [
+                102372,
+                87772,
+                90091,
+                96891,
+                87814,
+                91154,
+                108423
+              ]
+            },
+            "normal_open": {
+              "median_ns": 210549.0,
+              "elapsed_ns": [
+                218850,
+                210549,
+                210680,
+                206681,
+                206334,
+                205484,
+                213602
+              ]
+            },
+            "full_validation": {
+              "median_ns": 5507500.0,
+              "elapsed_ns": [
+                5368153,
+                5512327,
+                5485956,
+                5615812,
+                5639687,
+                5307094,
+                5507500
+              ]
+            },
+            "prepare": {
+              "median_ns": 5481141.0,
+              "elapsed_ns": [
+                5422945,
+                5495610,
+                5481141,
+                5685748,
+                5540822,
+                5397399,
+                5467407
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 51.254,
+              "elapsed_ns": [
+                12627534,
+                12946186,
+                12813585,
+                12697824,
+                12899575,
+                12595075,
+                12860561
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 53.654,
+              "elapsed_ns": [
+                13413571,
+                13696739,
+                13230916,
+                13665111,
+                13343909,
+                13258046,
+                13525465
+              ]
+            }
+          },
+          "file_sha256": "29d7c6443b115ce31f0d8c7c6283872ec0aaa04b8d52b4c55a1cae6dd755fcbf"
+        },
+        {
+          "mode": "compact",
+          "format_version": 3,
+          "file_bytes": 70868,
+          "decoded_bytes": 178667,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 70357,
+          "raw_rows": 56,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 29273,
+          "ef_power_of_two_rows": 0,
+          "groups": 14,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 2096,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 3668,
+          "prepared_hint_bytes": 3668,
+          "checked_scratch_capacity_bytes": 15,
+          "prepared_scratch_required_bytes": 15,
+          "local_trace_checksum_hex": "34908884fe27ffc9",
+          "local_trace_output_bytes": 1523057,
+          "setup": {
+            "build": {
+              "median_ns": 62210507.0,
+              "elapsed_ns": [
+                61848114,
+                62210507,
+                62219996
+              ]
+            },
+            "structural_open": {
+              "median_ns": 96275.0,
+              "elapsed_ns": [
+                92759,
+                112271,
+                96275,
+                91050,
+                107370,
+                110414,
+                94518
+              ]
+            },
+            "normal_open": {
+              "median_ns": 211537.0,
+              "elapsed_ns": [
+                203891,
+                211537,
+                239355,
+                199533,
+                202477,
+                213470,
+                228378
+              ]
+            },
+            "full_validation": {
+              "median_ns": 5635605.0,
+              "elapsed_ns": [
+                5658317,
+                5707511,
+                5589719,
+                5635605,
+                5658479,
+                5618809,
+                5597372
+              ]
+            },
+            "prepare": {
+              "median_ns": 5596232.0,
+              "elapsed_ns": [
+                5737804,
+                5639996,
+                5555990,
+                5752687,
+                5547240,
+                5596232,
+                5544110
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 52.556,
+              "elapsed_ns": [
+                13148758,
+                13139924,
+                12985519,
+                13040929,
+                13138940,
+                12943576,
+                13273434
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 55.027,
+              "elapsed_ns": [
+                13756301,
+                13555843,
+                13756746,
+                13909568,
+                13274898,
+                13842313,
+                13976680
+              ]
+            }
+          },
+          "file_sha256": "adf902a86dcd4cbc35ef20827bf3a9ec4e84a8a5db86c5a208bc9fbf40c5a5fc"
+        }
+      ]
+    },
+    {
+      "dataset": "multilingual_and_long",
+      "rows": 6165,
+      "matched_trace_checksum_hex": "8216277bf2b77d95",
+      "matched_trace_output_bytes": 10556045,
+      "modes": [
+        {
+          "mode": "raw",
+          "format_version": 2,
+          "file_bytes": 258203,
+          "decoded_bytes": 257819,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 0,
+          "raw_rows": 6165,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 0,
+          "ef_power_of_two_rows": 0,
+          "groups": 20,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 800,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 3084,
+          "prepared_hint_bytes": 3084,
+          "checked_scratch_capacity_bytes": 7521,
+          "prepared_scratch_required_bytes": 7521,
+          "local_trace_checksum_hex": "8685d8f9ae3acd52",
+          "local_trace_output_bytes": 10556044,
+          "setup": {
+            "build": {
+              "median_ns": 854639.0,
+              "elapsed_ns": [
+                856388,
+                854639,
+                852437
+              ]
+            },
+            "structural_open": {
+              "median_ns": 816.0,
+              "elapsed_ns": [
+                816,
+                1338,
+                1075,
+                707,
+                568,
+                1315,
+                806
+              ]
+            },
+            "normal_open": {
+              "median_ns": 413371.0,
+              "elapsed_ns": [
+                444566,
+                422167,
+                406903,
+                413350,
+                413365,
+                422059,
+                413371
+              ]
+            },
+            "full_validation": {
+              "median_ns": 1287521.0,
+              "elapsed_ns": [
+                1303820,
+                1314513,
+                1250157,
+                1261483,
+                1266509,
+                1287521,
+                1300806
+              ]
+            },
+            "prepare": {
+              "median_ns": 1266268.0,
+              "elapsed_ns": [
+                1286607,
+                1309473,
+                1249845,
+                1242227,
+                1256921,
+                1285531,
+                1266268
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 54.011,
+              "elapsed_ns": [
+                13760572,
+                13761229,
+                13128157,
+                13391671,
+                13456345,
+                13566947,
+                13502629
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 55.176,
+              "elapsed_ns": [
+                13920758,
+                13793897,
+                13412063,
+                13654989,
+                13957566,
+                13796092,
+                13750643
+              ]
+            }
+          },
+          "file_sha256": "05043ee8ba9ab4ca242319104f309f0db31b9e3895a5177575a4f2ea92bf4e8d"
+        },
+        {
+          "mode": "phrase",
+          "format_version": 2,
+          "file_bytes": 112163,
+          "decoded_bytes": 257819,
+          "dictionary_bytes": 1080,
+          "elias_fano_bytes": 0,
+          "raw_rows": 21,
+          "phrase_rows": 6144,
+          "ef_mixed_rows": 0,
+          "ef_power_of_two_rows": 0,
+          "groups": 19,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 3512,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 5388,
+          "prepared_hint_bytes": 3084,
+          "checked_scratch_capacity_bytes": 7521,
+          "prepared_scratch_required_bytes": 7528,
+          "local_trace_checksum_hex": "0df2b2ae39cb2cbe",
+          "local_trace_output_bytes": 10410411,
+          "setup": {
+            "build": {
+              "median_ns": 48053065.0,
+              "elapsed_ns": [
+                48304922,
+                47807865,
+                48053065
+              ]
+            },
+            "structural_open": {
+              "median_ns": 17738.0,
+              "elapsed_ns": [
+                20055,
+                17738,
+                16592,
+                16670,
+                16920,
+                19715,
+                22215
+              ]
+            },
+            "normal_open": {
+              "median_ns": 198255.0,
+              "elapsed_ns": [
+                198283,
+                194895,
+                188368,
+                194063,
+                198255,
+                209607,
+                199272
+              ]
+            },
+            "full_validation": {
+              "median_ns": 1148886.0,
+              "elapsed_ns": [
+                1167855,
+                1183142,
+                1115115,
+                1122881,
+                1148886,
+                1115801,
+                1164398
+              ]
+            },
+            "prepare": {
+              "median_ns": 1137808.0,
+              "elapsed_ns": [
+                1205390,
+                1165292,
+                1101774,
+                1094175,
+                1137808,
+                1087683,
+                1180247
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 55.097,
+              "elapsed_ns": [
+                13937625,
+                14120333,
+                13425439,
+                13696232,
+                14054482,
+                13189585,
+                13774345
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 55.134,
+              "elapsed_ns": [
+                14034283,
+                14090632,
+                13509979,
+                13780589,
+                13918160,
+                13287162,
+                13783622
+              ]
+            }
+          },
+          "file_sha256": "635d48e8457926c877f7f37ba77334489d2ea59b096f2235d34d6e0e5ca1ca9d"
+        },
+        {
+          "mode": "elias_fano_mixed",
+          "format_version": 3,
+          "file_bytes": 80484,
+          "decoded_bytes": 257819,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 2505,
+          "raw_rows": 21,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 6144,
+          "ef_power_of_two_rows": 0,
+          "groups": 20,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 1184,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 3084,
+          "prepared_hint_bytes": 3084,
+          "checked_scratch_capacity_bytes": 7521,
+          "prepared_scratch_required_bytes": 7521,
+          "local_trace_checksum_hex": "b294aa22028a0bc8",
+          "local_trace_output_bytes": 10409768,
+          "setup": {
+            "build": {
+              "median_ns": 1199058.0,
+              "elapsed_ns": [
+                1228568,
+                1199058,
+                1193691
+              ]
+            },
+            "structural_open": {
+              "median_ns": 12479.0,
+              "elapsed_ns": [
+                12410,
+                12766,
+                12311,
+                12474,
+                13767,
+                12479,
+                12777
+              ]
+            },
+            "normal_open": {
+              "median_ns": 143386.0,
+              "elapsed_ns": [
+                144837,
+                143386,
+                137812,
+                141821,
+                144072,
+                135083,
+                143435
+              ]
+            },
+            "full_validation": {
+              "median_ns": 1553308.0,
+              "elapsed_ns": [
+                1558696,
+                1603619,
+                1510651,
+                1529548,
+                1611738,
+                1479234,
+                1553308
+              ]
+            },
+            "prepare": {
+              "median_ns": 1527059.0,
+              "elapsed_ns": [
+                1564685,
+                1588306,
+                1527059,
+                1520735,
+                1491778,
+                1458413,
+                1567011
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 130.97,
+              "elapsed_ns": [
+                33496309,
+                33426685,
+                32612591,
+                32742593,
+                32512621,
+                31404055,
+                33090076
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 131.24,
+              "elapsed_ns": [
+                33659628,
+                33583977,
+                32375252,
+                32810014,
+                33181042,
+                31835093,
+                32722361
+              ]
+            }
+          },
+          "file_sha256": "d18512fb30933d72e74e9cb1b194287403ee0040cbbbe02d564fe5e69e97d430"
+        },
+        {
+          "mode": "elias_fano_power_of_two",
+          "format_version": 3,
+          "file_bytes": 81948,
+          "decoded_bytes": 257819,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 3969,
+          "raw_rows": 21,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 0,
+          "ef_power_of_two_rows": 6144,
+          "groups": 20,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 1184,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 3084,
+          "prepared_hint_bytes": 3084,
+          "checked_scratch_capacity_bytes": 7521,
+          "prepared_scratch_required_bytes": 7521,
+          "local_trace_checksum_hex": "b294aa22028a0bc8",
+          "local_trace_output_bytes": 10409768,
+          "setup": {
+            "build": {
+              "median_ns": 1228467.0,
+              "elapsed_ns": [
+                1228467,
+                1207016,
+                1238185
+              ]
+            },
+            "structural_open": {
+              "median_ns": 18045.0,
+              "elapsed_ns": [
+                17067,
+                18848,
+                18976,
+                17073,
+                18442,
+                16572,
+                18045
+              ]
+            },
+            "normal_open": {
+              "median_ns": 150379.0,
+              "elapsed_ns": [
+                150379,
+                152078,
+                150690,
+                147329,
+                171115,
+                143271,
+                147896
+              ]
+            },
+            "full_validation": {
+              "median_ns": 1377241.0,
+              "elapsed_ns": [
+                1366650,
+                1413231,
+                1402450,
+                1346523,
+                1384575,
+                1324545,
+                1377241
+              ]
+            },
+            "prepare": {
+              "median_ns": 1335463.0,
+              "elapsed_ns": [
+                1364507,
+                1365867,
+                1384549,
+                1335463,
+                1330680,
+                1307991,
+                1315327
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 99.364,
+              "elapsed_ns": [
+                25212752,
+                25374010,
+                25312456,
+                24841060,
+                24785460,
+                23949367,
+                24526796
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 101.601,
+              "elapsed_ns": [
+                25730375,
+                25400291,
+                25484236,
+                25181807,
+                24281583,
+                25697183,
+                24942139
+              ]
+            }
+          },
+          "file_sha256": "fa65d01f78df939f374f937dfb3c9fd6229356f6134e0aea53f59fedc97917f2"
+        },
+        {
+          "mode": "compact",
+          "format_version": 3,
+          "file_bytes": 80484,
+          "decoded_bytes": 257819,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 2505,
+          "raw_rows": 21,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 6144,
+          "ef_power_of_two_rows": 0,
+          "groups": 20,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 1184,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 3084,
+          "prepared_hint_bytes": 3084,
+          "checked_scratch_capacity_bytes": 7521,
+          "prepared_scratch_required_bytes": 7521,
+          "local_trace_checksum_hex": "b294aa22028a0bc8",
+          "local_trace_output_bytes": 10409768,
+          "setup": {
+            "build": {
+              "median_ns": 50142998.0,
+              "elapsed_ns": [
+                47647619,
+                50422281,
+                50142998
+              ]
+            },
+            "structural_open": {
+              "median_ns": 13081.0,
+              "elapsed_ns": [
+                13939,
+                14748,
+                13053,
+                11978,
+                13081,
+                35869,
+                12577
+              ]
+            },
+            "normal_open": {
+              "median_ns": 139257.0,
+              "elapsed_ns": [
+                144002,
+                143782,
+                135145,
+                137634,
+                135431,
+                139257,
+                140421
+              ]
+            },
+            "full_validation": {
+              "median_ns": 1543469.0,
+              "elapsed_ns": [
+                1608506,
+                1580167,
+                1502409,
+                1503977,
+                1494071,
+                1567046,
+                1543469
+              ]
+            },
+            "prepare": {
+              "median_ns": 1545548.0,
+              "elapsed_ns": [
+                1588532,
+                1573651,
+                1502556,
+                1575045,
+                1478418,
+                1525857,
+                1545548
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 131.718,
+              "elapsed_ns": [
+                33689332,
+                33175922,
+                32929572,
+                33206617,
+                31385688,
+                32803470,
+                32380329
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 131.899,
+              "elapsed_ns": [
+                33587379,
+                33252757,
+                33037198,
+                32926949,
+                31878488,
+                32974795,
+                32765739
+              ]
+            }
+          },
+          "file_sha256": "d18512fb30933d72e74e9cb1b194287403ee0040cbbbe02d564fe5e69e97d430"
+        }
+      ]
+    },
+    {
+      "dataset": "high_entropy",
+      "rows": 2048,
+      "matched_trace_checksum_hex": "7e7838631c4fdeca",
+      "matched_trace_output_bytes": 12000000,
+      "modes": [
+        {
+          "mode": "raw",
+          "format_version": 2,
+          "file_bytes": 98384,
+          "decoded_bytes": 98304,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 0,
+          "raw_rows": 2048,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 0,
+          "ef_power_of_two_rows": 0,
+          "groups": 1,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 40,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 0,
+          "prepared_hint_bytes": 0,
+          "checked_scratch_capacity_bytes": 48,
+          "prepared_scratch_required_bytes": 48,
+          "local_trace_checksum_hex": "7e7838631c4fdeca",
+          "local_trace_output_bytes": 12000000,
+          "setup": {
+            "build": {
+              "median_ns": 216792.0,
+              "elapsed_ns": [
+                226970,
+                216568,
+                216792
+              ]
+            },
+            "structural_open": {
+              "median_ns": 331.0,
+              "elapsed_ns": [
+                190,
+                567,
+                753,
+                650,
+                331,
+                136,
+                104
+              ]
+            },
+            "normal_open": {
+              "median_ns": 177512.0,
+              "elapsed_ns": [
+                196211,
+                176829,
+                197147,
+                177512,
+                157612,
+                182014,
+                174976
+              ]
+            },
+            "full_validation": {
+              "median_ns": 359434.0,
+              "elapsed_ns": [
+                359434,
+                358709,
+                381094,
+                388658,
+                353893,
+                366275,
+                352109
+              ]
+            },
+            "prepare": {
+              "median_ns": 349683.0,
+              "elapsed_ns": [
+                352290,
+                353513,
+                349917,
+                342936,
+                340657,
+                349683,
+                341877
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 48.18,
+              "elapsed_ns": [
+                12207390,
+                12045108,
+                12133722,
+                11997747,
+                11998159,
+                12318257,
+                12015211
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 48.91,
+              "elapsed_ns": [
+                12336272,
+                12227469,
+                12280875,
+                12087217,
+                12127713,
+                12243573,
+                12098827
+              ]
+            }
+          },
+          "file_sha256": "f456440a87b67444c292fd5d81f4a4d05bcda90c27eac8d010cebf9aec77bbce"
+        },
+        {
+          "mode": "phrase",
+          "format_version": 2,
+          "file_bytes": 93809,
+          "decoded_bytes": 98304,
+          "dictionary_bytes": 674,
+          "elias_fano_bytes": 0,
+          "raw_rows": 0,
+          "phrase_rows": 2048,
+          "ef_mixed_rows": 0,
+          "ef_power_of_two_rows": 0,
+          "groups": 7,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 4376,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 6400,
+          "prepared_hint_bytes": 4096,
+          "checked_scratch_capacity_bytes": 48,
+          "prepared_scratch_required_bytes": 55,
+          "local_trace_checksum_hex": "62ff318a041ba2c6",
+          "local_trace_output_bytes": 12000000,
+          "setup": {
+            "build": {
+              "median_ns": 85062808.0,
+              "elapsed_ns": [
+                86156435,
+                85062808,
+                85038043
+              ]
+            },
+            "structural_open": {
+              "median_ns": 45004.0,
+              "elapsed_ns": [
+                48021,
+                41348,
+                46547,
+                43927,
+                43733,
+                47402,
+                45004
+              ]
+            },
+            "normal_open": {
+              "median_ns": 189341.0,
+              "elapsed_ns": [
+                210433,
+                193032,
+                189282,
+                189262,
+                189341,
+                202906,
+                187384
+              ]
+            },
+            "full_validation": {
+              "median_ns": 605390.0,
+              "elapsed_ns": [
+                631494,
+                615793,
+                604628,
+                605390,
+                611023,
+                601025,
+                602538
+              ]
+            },
+            "prepare": {
+              "median_ns": 602813.0,
+              "elapsed_ns": [
+                598238,
+                614322,
+                605341,
+                600849,
+                605655,
+                602813,
+                594608
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 63.894,
+              "elapsed_ns": [
+                15949532,
+                16346425,
+                16129323,
+                16014001,
+                15973417,
+                15940710,
+                15710696
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 64.533,
+              "elapsed_ns": [
+                16188516,
+                16471972,
+                16167659,
+                16101908,
+                16094169,
+                16133153,
+                15868925
+              ]
+            }
+          },
+          "file_sha256": "0241ce24c972b4f594611e136b18dddde859331c796b685d91e550f8eb239448"
+        },
+        {
+          "mode": "elias_fano_mixed",
+          "format_version": 2,
+          "file_bytes": 98384,
+          "decoded_bytes": 98304,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 0,
+          "raw_rows": 2048,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 0,
+          "ef_power_of_two_rows": 0,
+          "groups": 1,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 40,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 0,
+          "prepared_hint_bytes": 0,
+          "checked_scratch_capacity_bytes": 48,
+          "prepared_scratch_required_bytes": 48,
+          "local_trace_checksum_hex": "7e7838631c4fdeca",
+          "local_trace_output_bytes": 12000000,
+          "setup": {
+            "build": {
+              "median_ns": 234140.0,
+              "elapsed_ns": [
+                234140,
+                224388,
+                257047
+              ]
+            },
+            "structural_open": {
+              "median_ns": 556.0,
+              "elapsed_ns": [
+                857,
+                324,
+                556,
+                568,
+                438,
+                204,
+                645
+              ]
+            },
+            "normal_open": {
+              "median_ns": 181259.0,
+              "elapsed_ns": [
+                180901,
+                162761,
+                216475,
+                187065,
+                191949,
+                181259,
+                159716
+              ]
+            },
+            "full_validation": {
+              "median_ns": 359622.0,
+              "elapsed_ns": [
+                364145,
+                379463,
+                363234,
+                354604,
+                359622,
+                350905,
+                350428
+              ]
+            },
+            "prepare": {
+              "median_ns": 344177.0,
+              "elapsed_ns": [
+                349425,
+                348480,
+                342395,
+                343446,
+                345217,
+                344177,
+                340420
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 48.153,
+              "elapsed_ns": [
+                12110328,
+                12236529,
+                11954836,
+                12048113,
+                12038125,
+                11978162,
+                12011140
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 48.446,
+              "elapsed_ns": [
+                12334348,
+                12334907,
+                12085921,
+                12318104,
+                12087857,
+                12090378,
+                12111437
+              ]
+            }
+          },
+          "file_sha256": "f456440a87b67444c292fd5d81f4a4d05bcda90c27eac8d010cebf9aec77bbce"
+        },
+        {
+          "mode": "elias_fano_power_of_two",
+          "format_version": 2,
+          "file_bytes": 98384,
+          "decoded_bytes": 98304,
+          "dictionary_bytes": 0,
+          "elias_fano_bytes": 0,
+          "raw_rows": 2048,
+          "phrase_rows": 0,
+          "ef_mixed_rows": 0,
+          "ef_power_of_two_rows": 0,
+          "groups": 1,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 40,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 0,
+          "prepared_hint_bytes": 0,
+          "checked_scratch_capacity_bytes": 48,
+          "prepared_scratch_required_bytes": 48,
+          "local_trace_checksum_hex": "7e7838631c4fdeca",
+          "local_trace_output_bytes": 12000000,
+          "setup": {
+            "build": {
+              "median_ns": 227041.0,
+              "elapsed_ns": [
+                227041,
+                222952,
+                257541
+              ]
+            },
+            "structural_open": {
+              "median_ns": 253.0,
+              "elapsed_ns": [
+                435,
+                194,
+                253,
+                628,
+                478,
+                108,
+                250
+              ]
+            },
+            "normal_open": {
+              "median_ns": 160801.0,
+              "elapsed_ns": [
+                160806,
+                160797,
+                187246,
+                160801,
+                157618,
+                179180,
+                157629
+              ]
+            },
+            "full_validation": {
+              "median_ns": 354471.0,
+              "elapsed_ns": [
+                366591,
+                354471,
+                356340,
+                365167,
+                346655,
+                346230,
+                349650
+              ]
+            },
+            "prepare": {
+              "median_ns": 349897.0,
+              "elapsed_ns": [
+                352952,
+                351390,
+                349897,
+                350011,
+                344154,
+                343578,
+                341671
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 48.632,
+              "elapsed_ns": [
+                12157910,
+                12230722,
+                12202389,
+                12226576,
+                11942082,
+                11969905,
+                11935770
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 48.731,
+              "elapsed_ns": [
+                12337233,
+                12347779,
+                12335431,
+                12182650,
+                12086070,
+                12086689,
+                12084562
+              ]
+            }
+          },
+          "file_sha256": "f456440a87b67444c292fd5d81f4a4d05bcda90c27eac8d010cebf9aec77bbce"
+        },
+        {
+          "mode": "compact",
+          "format_version": 2,
+          "file_bytes": 93809,
+          "decoded_bytes": 98304,
+          "dictionary_bytes": 674,
+          "elias_fano_bytes": 0,
+          "raw_rows": 0,
+          "phrase_rows": 2048,
+          "ef_mixed_rows": 0,
+          "ef_power_of_two_rows": 0,
+          "groups": 7,
+          "checked_inline_bytes": 216,
+          "checked_metadata_heap_bytes": 4376,
+          "prepared_inline_bytes": 112,
+          "prepared_additional_heap_bytes": 6400,
+          "prepared_hint_bytes": 4096,
+          "checked_scratch_capacity_bytes": 48,
+          "prepared_scratch_required_bytes": 55,
+          "local_trace_checksum_hex": "62ff318a041ba2c6",
+          "local_trace_output_bytes": 12000000,
+          "setup": {
+            "build": {
+              "median_ns": 85857070.0,
+              "elapsed_ns": [
+                85942042,
+                85857070,
+                84131695
+              ]
+            },
+            "structural_open": {
+              "median_ns": 40433.0,
+              "elapsed_ns": [
+                44639,
+                40433,
+                40166,
+                44627,
+                39337,
+                39533,
+                41033
+              ]
+            },
+            "normal_open": {
+              "median_ns": 191415.0,
+              "elapsed_ns": [
+                193754,
+                193174,
+                191415,
+                209004,
+                188014,
+                187530,
+                189415
+              ]
+            },
+            "full_validation": {
+              "median_ns": 607514.0,
+              "elapsed_ns": [
+                615391,
+                633239,
+                618016,
+                607514,
+                600637,
+                604064,
+                606646
+              ]
+            },
+            "prepare": {
+              "median_ns": 607460.0,
+              "elapsed_ns": [
+                611187,
+                615408,
+                611180,
+                602694,
+                607460,
+                599905,
+                604500
+              ]
+            }
+          },
+          "warm_ns_per_value": {
+            "matched_prepared_retrieval": {
+              "median_ns_per_value": 64.919,
+              "elapsed_ns": [
+                16498998,
+                16499874,
+                16478401,
+                16024492,
+                16159724,
+                16229804,
+                16133690
+              ]
+            },
+            "local_prepared_sampling": {
+              "median_ns_per_value": 66.162,
+              "elapsed_ns": [
+                16598676,
+                16540568,
+                16652031,
+                16308181,
+                16241929,
+                16560834,
+                16331621
+              ]
+            }
+          },
+          "file_sha256": "0241ce24c972b4f594611e136b18dddde859331c796b685d91e550f8eb239448"
+        }
+      ]
+    }
+  ],
+  "environment": {
+    "run_started_utc": "2026-11-25T12:34:59+00:00",
+    "platform": "Linux-7.0.13-200.fc44.x86_64-x86_64-with-glibc2.43",
+    "cpu_architecture": "x86_64",
+    "cpu_model": "12th Gen Intel(R) Core(TM) i9-12900K",
+    "logical_cpus": 24,
+    "available_logical_cpus": 24,
+    "rustc": "rustc 1.91.1 (ed61e7d7e 2025-11-07)\nbinary: rustc\ncommit-hash: ed61e7d7e242494fb7057f2657300d9e77bb4fcb\ncommit-date: 2025-11-07\nhost: x86_64-unknown-linux-gnu\nrelease: 1.91.1\nLLVM version: 21.1.2",
+    "cargo": "cargo 1.91.1 (ea2d97820 2025-10-10)",
+    "library_build": "Cargo release profile",
+    "harness_build": "rustc -O -C lto=thin -C codegen-units=1"
+  },
+  "reproduction": {
+    "command": [
+      "python3",
+      "benchmarks/run_codecs.py",
+      "--iterations",
+      "250000",
+      "--rounds",
+      "7",
+      "--build-rounds",
+      "3"
+    ],
+    "input_sha256": {
+      "Cargo.toml": "f90fa4d27f1139e1f7a53aecf1b3b55954e08dfc2c269443e7f40b00af97ecbf",
+      "Cargo.lock": "5a8edc83fe739da4a05af8f464a3afda6f3ad065c5ef980d008a3b51ae0fa582",
+      "benchmarks/codecs.rs": "1d6deb201aaba74ae632d630557e7ab8514ab912f156fec75c5e19a46ab842fc",
+      "benchmarks/run_codecs.py": "aefabace9162650394bf717dee881835e27a4eb928ba8c982c7aafa07032cb74",
+      "benchmarks/run_prepared.py": "61e18ad0c03564eb76970380cba1b79c41739f47cfb9d988af7b1d88b4c85f84",
+      "data/ssa_2024_given_names.txt": "a9c432e163d94e066fc068020f249b333f4ff1703298ecacc13e579bcbeff396",
+      "src/bin/pkbyte/jsonl.rs": "42c65717ed3a5b1c64cd045ce0ba1cc27def57e012c7d6b37832f9468aada115",
+      "src/bin/pkbyte.rs": "4b26d42276a032b0c98863b918282da81bd6b61091973085cdc40d85b93a5de5",
+      "src/builder.rs": "285790c2dbfa4319cd43344f810ef6bebc16679e097770170da745428b07af84",
+      "src/ef.rs": "9ef7766f3656ba2a7b3faedce3ad773e2142722ce877c1db025ff8760032e57f",
+      "src/error.rs": "345c0f52ce2f1d12706cd877e12c05b0a369faa7281cc8933c8b94f849df0bd5",
+      "src/format.rs": "3cfd994680ac6a3150b46f01c10e0df7a9a20ef92e06f69c84c52ef727b2801d",
+      "src/lib.rs": "73ead4cef051d3eb1c17625361dc765443b96ef37a697518b489c7385c6019fe",
+      "src/reader/prepared.rs": "7848e67e74de061fdee4336969d79b31f732a586b2b92aa644790bf9619a5e7c",
+      "src/reader.rs": "1794307d90b1fb938187106b4f57aa4dbf69af749949321a47543c8ec4d0edcf",
+      "src/sampling.rs": "63c8c31c95a5bda0f49eaa2a94d6dbd29748702393a33a56ce3286ea4ffe6543"
+    },
+    "release_rlib_sha256": "507107d78449957854aae9e8648153dd782e51e619025fc9487801fe924e92c0",
+    "benchmark_executable_sha256": "506c35e5478418aafd192619fbba0086857ac53979444de9b1785d3b3f5b1261"
+  }
+}
