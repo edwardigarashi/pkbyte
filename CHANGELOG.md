@@ -1,6 +1,15 @@
 # Changelog
 
-## 0.1.1 local release candidate
+## 0.1.2
+
+- Uses the MIT license for project-owned code and documentation.
+- Includes PNG copies of the benchmark charts and uses repository-relative
+  chart links in the README.
+
+## 0.1.1
+
+The published package uses `MIT OR Apache-2.0`.
+[crates.io release](https://crates.io/crates/pkbyte/0.1.1)
 
 - Adds an owning `Picker` for a file, owned bytes, or an iterator of strings.
   It performs validation and preparation once and supports repeatable seeds,
@@ -35,5 +44,5 @@
   evidence, and current comparisons for storage, build heap, reader setup,
   and sampling. Historical Namepack measurements retain their provenance.
 
-Registry publication is pending. [Compatibility policy](docs/FORMAT.md) ·
+[Compatibility policy](docs/FORMAT.md) ·
 [Release procedure](docs/RELEASE.md) · [Release verification](docs/VALIDATION.md#release-verification)

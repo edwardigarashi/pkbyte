@@ -38,8 +38,8 @@
 //!
 //! The [wire format] and [reader design] describe versioning and limits.
 //!
-//! [wire format]: https://github.com/edwardigarashi/pkbyte/blob/v0.1.1/docs/FORMAT.md
-//! [reader design]: https://github.com/edwardigarashi/pkbyte/blob/v0.1.1/docs/DESIGN.md
+//! [wire format]: https://github.com/edwardigarashi/pkbyte/blob/v0.1.2/docs/FORMAT.md
+//! [reader design]: https://github.com/edwardigarashi/pkbyte/blob/v0.1.2/docs/DESIGN.md
 //!
 //! ```
 //! use pkbyte::{build, BuildOptions, PrepareOptions, Table};

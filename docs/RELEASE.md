@@ -1,7 +1,6 @@
 # Release procedure
 
-`0.1.1` is a release candidate. Publication on crates.io is pending. The
-local distribution is a Cargo `.crate` source archive and a native
+The local distribution is a Cargo `.crate` source archive and a native
 `x86_64-unknown-linux-musl` CLI tarball. The project-owned code and
 documentation are available under the MIT license.
 [MIT license](../LICENSE) · [Third-party notices](THIRD-PARTY.md)
@@ -40,10 +39,10 @@ revision and dirty status when available. SHA-256 identifies the files produced
 by that run. Archive hashes alone do not establish publisher identity.
 
 ```sh
-cd dist/pkbyte-0.1.1
+cd dist/pkbyte-0.1.2
 sha256sum -c SHA256SUMS
-tar -tzf pkbyte-0.1.1.crate
-tar -tzf pkbyte-0.1.1-x86_64-unknown-linux-musl.tar.gz
+tar -tzf pkbyte-0.1.2.crate
+tar -tzf pkbyte-0.1.2-x86_64-unknown-linux-musl.tar.gz
 ```
 
 ## Consume a local candidate
@@ -54,7 +53,7 @@ its manifest at the unpacked package. Add the same path under
 
 ```toml
 [dependencies]
-pkbyte = { path = "../pkbyte-0.1.1" }
+pkbyte = { path = "../pkbyte-0.1.2" }
 ```
 
 With the unpacked package as the working directory, run the Rust examples or
@@ -69,48 +68,48 @@ python3 tools/run_generated.py --toolchain 1.74.0
 
 To use the supplied CLI on Linux x86-64, unpack the tarball and run its
 executable directly. To install from the unpacked crate on a native Rust host,
-use `cargo install --path ./pkbyte-0.1.1 --locked --offline`.
+use `cargo install --path ./pkbyte-0.1.2 --locked --offline`.
 
 ```sh
-tar -xzf pkbyte-0.1.1-x86_64-unknown-linux-musl.tar.gz
-./pkbyte-0.1.1-x86_64-unknown-linux-musl/pkbyte --version
+tar -xzf pkbyte-0.1.2-x86_64-unknown-linux-musl.tar.gz
+./pkbyte-0.1.2-x86_64-unknown-linux-musl/pkbyte --version
 ```
 
 ## Publish on crates.io
 
 Commit the candidate in the source repository named in `package.repository`
-and record `git rev-parse HEAD`. Push the release revision with the `v0.1.1`
+and record `git rev-parse HEAD`. Push the release revision with the `v0.1.2`
 tag to the public repository. Verify the documentation links and image
 rendering, then check the platform scope and release notes for this revision.
 [Validation record](VALIDATION.md) · [Changelog](../CHANGELOG.md)
 
 Use the clean release revision for packaging and publication. Confirm that
-the name and release version are available on crates.io. For the first
-publication, sign in to the authorized crates.io account and create an API
-token with permission to publish a new crate. Enter it at the `cargo login`
-prompt. [Cargo publishing guide](https://doc.rust-lang.org/cargo/reference/publishing.html)
+the release version is unused on crates.io. Use an API token authorized to
+publish the crate. If needed, enter it at the `cargo login` prompt.
+[Cargo publishing guide](https://doc.rust-lang.org/cargo/reference/publishing.html)
 
 ```sh
 cargo +1.74.0 package --list --locked --offline
 python3 tools/verify_release.py
 cargo +1.74.0 publish --dry-run --locked --registry crates-io
-cmp target/package/pkbyte-0.1.1.crate dist/pkbyte-0.1.1/pkbyte-0.1.1.crate
-cargo +1.74.0 login --registry crates-io
+cmp target/package/pkbyte-0.1.2.crate dist/pkbyte-0.1.2/pkbyte-0.1.2.crate
 cargo +1.74.0 publish --locked --registry crates-io
 ```
 
-Compare the registry checksum for `0.1.1` with the verified archive
+Compare the registry checksum for `0.1.2` with the verified archive
 checksum. In a new consumer project, add the exact registry version and run
 the rustdoc `Picker::from_strings` example. Install the CLI in a fresh
 installation root and check its version.
 
 ```sh
-cargo add 'pkbyte@=0.1.1'
-cargo install pkbyte --version '=0.1.1' --locked --root ./pkbyte-registry-install
-./pkbyte-registry-install/bin/pkbyte --version
+release_smoke_dir=$(mktemp -d)
+cargo +1.74.0 new --bin --vcs none "$release_smoke_dir/consumer"
+cargo +1.74.0 add --manifest-path "$release_smoke_dir/consumer/Cargo.toml" 'pkbyte@=0.1.2'
+cargo +1.74.0 install pkbyte --version '=0.1.2' --locked --root "$release_smoke_dir/install"
+"$release_smoke_dir/install/bin/pkbyte" --version
 ```
 
 Check that the versioned docs.rs build succeeds and that the crate's library
 documentation opens. Check the rendered README on crates.io against the public
-source. Update the repository release status after the registry checks pass.
-[Registry version](https://crates.io/crates/pkbyte/0.1.1) · [Documentation build](https://docs.rs/crate/pkbyte/0.1.1/builds) · [Library documentation](https://docs.rs/pkbyte/0.1.1/pkbyte/)
+source.
+[Registry version](https://crates.io/crates/pkbyte/0.1.2) · [Documentation build](https://docs.rs/crate/pkbyte/0.1.2/builds) · [Library documentation](https://docs.rs/pkbyte/0.1.2/pkbyte/)

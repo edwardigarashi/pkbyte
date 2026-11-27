@@ -31,13 +31,13 @@ The compact reader samples a value in **57.561 ns** in the recorded warm benchma
 
 pkbyte requires Rust **1.74 or newer**. The library and CLI use the standard library.
 
-For a release published on crates.io, install the CLI with this command.
+Install the CLI from crates.io.
 
 ```sh
 cargo install pkbyte --locked
 ```
 
-To try the **0.1.1** candidate before publication, run this command from the source checkout or unpacked `.crate`.
+To install from local source, run this command from the checkout or unpacked `.crate`.
 
 ```sh
 cargo install --path . --locked --offline
@@ -64,17 +64,17 @@ Run `pkbyte` for an overview or `pkbyte pack --help` for options. Installation d
 
 ### From Rust
 
-For a release published on crates.io, run this command in your application.
+Add pkbyte from crates.io by running this command in your application.
 
 ```sh
 cargo add pkbyte
 ```
 
-Before publication, add the unpacked candidate as a path dependency. Adjust the path relative to your application's `Cargo.toml`.
+To use an unpacked source archive, add it as a path dependency. Adjust the path relative to your application's `Cargo.toml`.
 
 ```toml
 [dependencies]
-pkbyte = { path = "../pkbyte-0.1.1" }
+pkbyte = { path = "../pkbyte-0.1.2" }
 ```
 
 Open a table and pick a value:

@@ -8,15 +8,15 @@ library and require Rust 1.74 or newer.
 
 ## Install the CLI
 
-For a release published on crates.io, install the CLI with this command.
+Install the CLI from crates.io.
 
 ```sh
 cargo install pkbyte --locked
 ```
 
-To try the 0.1.1 candidate before publication, run this command from the
-source checkout or unpacked `.crate`. The release guide also covers the CLI
-archive and its checksums. [Release procedure](RELEASE.md)
+To install from local source, run this command from the checkout or unpacked
+`.crate`. The release guide also covers the CLI archive and its checksums.
+[Release procedure](RELEASE.md)
 
 ```sh
 cargo install --path . --locked --offline
@@ -54,13 +54,13 @@ the installed CLI version.
 
 ## Pick from Rust
 
-For a release published on crates.io, run `cargo add pkbyte` in your
-application. Before publication, add the unpacked candidate as a path
-dependency. Adjust the path relative to your application's `Cargo.toml`.
+Run `cargo add pkbyte` in your application to use the crates.io release. To
+use an unpacked source archive, add it as a path dependency. Adjust the path
+relative to your application's `Cargo.toml`.
 
 ```toml
 [dependencies]
-pkbyte = { path = "../pkbyte-0.1.1" }
+pkbyte = { path = "../pkbyte-0.1.2" }
 ```
 
 Run with `values.npk` in your working directory, or give the file example
